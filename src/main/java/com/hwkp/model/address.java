@@ -2,18 +2,18 @@ package com.hwkp.model;
 
 public class address {
     private Integer no;
-    private String user_name;
-    private String postal_code;
-    private String province_came;
-    private String city_name;
-    private String county_name;
-    private String detail_info;
-    private String national_code;
-    private String tel_number;
-    private String created_user;
-    private String created_time;
-    private String modified_user;
-    private String modified_time;
+    private String user_name;//收货人姓名
+    private String postal_code;//邮编
+    private String province_came;//国标收货地址第一级地址
+    private String city_name;//国标收货地址第二级地址
+    private String county_name;//
+    private String detail_info;//详细收货地址信息
+    private String national_code;//收货地址国家码
+    private String tel_number;//收货人手机号码
+    private String created_user;//
+    private String created_time;//
+    private String modified_user;//
+    private String modified_time;//
 
     public Integer getNo() {
         return no;

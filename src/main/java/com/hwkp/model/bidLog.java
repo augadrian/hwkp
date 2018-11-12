@@ -1,15 +1,15 @@
 package com.hwkp.model;
 
-public class adv {
-     private Integer id;//
-     private String type;//0 首页轮播 1 财富榜广告 2 我的界面底部广告 3 钱包金额界面广告 4 保证金界面广告 5 退款界面广告
-     private  String advertise;//
-     private  String position;//广告位置
-     private Integer is_active;//
-     private  String created_user;//
-     private  String created_time;//
-     private  String modified_user;//
-     private  String modified_time;//
+public class bidLog {
+    private  Integer id;
+    private String round_id;//轮次ID
+    private float bid_price;//出价价格
+    private float bid_increment;//加价幅度
+    private Integer is_active;
+    private String created_user;//
+    private String created_time;//
+    private String modified_user;//
+    private String modified_time;//
 
     public Integer getId() {
         return id;
@@ -19,28 +19,28 @@ public class adv {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getRound_id() {
+        return round_id;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setRound_id(String round_id) {
+        this.round_id = round_id;
     }
 
-    public String getAdvertise() {
-        return advertise;
+    public float getBid_price() {
+        return bid_price;
     }
 
-    public void setAdvertise(String advertise) {
-        this.advertise = advertise;
+    public void setBid_price(float bid_price) {
+        this.bid_price = bid_price;
     }
 
-    public String getPosition() {
-        return position;
+    public float getBid_increment() {
+        return bid_increment;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setBid_increment(float bid_increment) {
+        this.bid_increment = bid_increment;
     }
 
     public Integer getIs_active() {

@@ -1,15 +1,15 @@
 package com.hwkp.model;
 
-public class adv {
-     private Integer id;//
-     private String type;//0 首页轮播 1 财富榜广告 2 我的界面底部广告 3 钱包金额界面广告 4 保证金界面广告 5 退款界面广告
-     private  String advertise;//
-     private  String position;//广告位置
-     private Integer is_active;//
-     private  String created_user;//
-     private  String created_time;//
-     private  String modified_user;//
-     private  String modified_time;//
+public class collect {
+
+    private Integer id;
+    private String object_id;//轮次id
+    private String status;
+    private Integer is_active;
+    private String created_user;//
+    private String created_time;//
+    private String modified_user;//
+    private String modified_time;//
 
     public Integer getId() {
         return id;
@@ -19,28 +19,20 @@ public class adv {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public String getObject_id() {
+        return object_id;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setObject_id(String object_id) {
+        this.object_id = object_id;
     }
 
-    public String getAdvertise() {
-        return advertise;
+    public String getStatus() {
+        return status;
     }
 
-    public void setAdvertise(String advertise) {
-        this.advertise = advertise;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Integer getIs_active() {
