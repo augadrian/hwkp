@@ -1,11 +1,13 @@
 package com.hwkp.model;
 
-public class bidLog {
-    private  Integer id;
-    private String roundId;//轮次ID
-    private float bidPrice;//出价价格
-    private float bidIncrement;//加价幅度
-    private Integer isActive;
+public class MoneyLog {
+    private Integer id;
+    private String objectId;//
+    private double money;//
+    private String wxOpenid;//
+    private Integer type;//1.提现 2.充值 3.押金退款 4.扣除押金 5竞拍获得 6竞拍支付 7邀请获得
+    private Integer isAchieved;//是否领取 默认1 已领取
+    private Integer isActive;//
     private String createdUser;//
     private String createdTime;//
     private String modifiedUser;//
@@ -19,28 +21,44 @@ public class bidLog {
         this.id = id;
     }
 
-    public String getRoundId() {
-        return roundId;
+    public String getObjectId() {
+        return objectId;
     }
 
-    public void setRoundId(String roundId) {
-        this.roundId = roundId;
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 
-    public float getBidPrice() {
-        return bidPrice;
+    public double getMoney() {
+        return money;
     }
 
-    public void setBidPrice(float bidPrice) {
-        this.bidPrice = bidPrice;
+    public void setMoney(double money) {
+        this.money = money;
     }
 
-    public float getBidIncrement() {
-        return bidIncrement;
+    public String getWxOpenid() {
+        return wxOpenid;
     }
 
-    public void setBidIncrement(float bidIncrement) {
-        this.bidIncrement = bidIncrement;
+    public void setWxOpenid(String wxOpenid) {
+        this.wxOpenid = wxOpenid;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
+
+    public Integer getIsAchieved() {
+        return isAchieved;
+    }
+
+    public void setIsAchieved(Integer isAchieved) {
+        this.isAchieved = isAchieved;
     }
 
     public Integer getIsActive() {

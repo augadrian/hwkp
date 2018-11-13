@@ -5,11 +5,11 @@ public class adv {
      private String type;//0 首页轮播 1 财富榜广告 2 我的界面底部广告 3 钱包金额界面广告 4 保证金界面广告 5 退款界面广告
      private  String advertise;//
      private  String position;//广告位置
-     private Integer is_active;//
-     private  String created_user;//
-     private  String created_time;//
-     private  String modified_user;//
-     private  String modified_time;//
+     private Integer isActive;//
+     private  String createdUser;//
+     private  String createdTime;//
+     private  String modifiedUser;//
+     private  String modifiedTime;//
 
     public Integer getId() {
         return id;
@@ -43,43 +43,43 @@ public class adv {
         this.position = position;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }

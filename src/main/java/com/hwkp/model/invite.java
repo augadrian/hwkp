@@ -2,14 +2,14 @@ package com.hwkp.model;
 
 public class invite {
     private Integer id;
-    private String inviter_id;//邀请者ID
-    private String invited_id;//被邀请者ID
-    private float total_commission;//好友为我累计赚取佣金
-    private Integer is_active;
-    private String created_user;//
-    private String created_time;//
-    private String modified_user;//
-    private String modified_time;//
+    private String inviterId;//邀请者ID
+    private String invitedId;//被邀请者ID
+    private float totalCommission;//好友为我累计赚取佣金
+    private Integer isActive;
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedUser;//
+    private String modifiedTime;//
 
     public Integer getId() {
         return id;
@@ -19,68 +19,67 @@ public class invite {
         this.id = id;
     }
 
-    public String getInviter_id() {
-        return inviter_id;
+    public String getInviterId() {
+        return inviterId;
     }
 
-    public void setInviter_id(String inviter_id) {
-        this.inviter_id = inviter_id;
+    public void setInviterId(String inviterId) {
+        this.inviterId = inviterId;
     }
 
-    public String getInvited_id() {
-        return invited_id;
+    public String getInvitedId() {
+        return invitedId;
     }
 
-    public void setInvited_id(String invited_id) {
-        this.invited_id = invited_id;
+    public void setInvitedId(String invitedId) {
+        this.invitedId = invitedId;
     }
 
-    public float getTotal_commission() {
-        return total_commission;
+    public float getTotalCommission() {
+        return totalCommission;
     }
 
-    public void setTotal_commission(float total_commission) {
-        this.total_commission = total_commission;
+    public void setTotalCommission(float totalCommission) {
+        this.totalCommission = totalCommission;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }
-

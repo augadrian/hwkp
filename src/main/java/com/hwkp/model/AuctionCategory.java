@@ -1,15 +1,13 @@
 package com.hwkp.model;
 
-public class collect {
-
+public class AuctionCategory {
     private Integer id;
-    private String objectId;//轮次id
-    private String status;
-    private Integer isActive;
-    private String createdUser;//
-    private String createdTime;//
-    private String modifiedUser;//
-    private String modifiedTime;//
+    private String categoryId;//类别id
+    private  String categoryName;//类别名称
+    private  Integer isActive;
+    private  String createdUser;
+    private  String modifiedUser;
+    private  String modifiedTime;
 
     public Integer getId() {
         return id;
@@ -19,20 +17,20 @@ public class collect {
         this.id = id;
     }
 
-    public String getObjectId() {
-        return objectId;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setObjectId(String objectId) {
-        this.objectId = objectId;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public String getStatus() {
-        return status;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public Integer getIsActive() {
@@ -49,14 +47,6 @@ public class collect {
 
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
-    }
-
-    public String getCreatedTime() {
-        return createdTime;
-    }
-
-    public void setCreatedTime(String createdTime) {
-        this.createdTime = createdTime;
     }
 
     public String getModifiedUser() {

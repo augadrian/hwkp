@@ -2,23 +2,23 @@ package com.hwkp.model;
 
 public class vendee {
     private Integer id;//
-    private String round_id;//轮次ID
-    private String bid_name;//买受人昵称
-    private String bid_head;//买受人头像
-    private String product_id;//商品id
-    private String order_id;//
-    private float bid_price;//成交价
-    private Integer is_pay;//是否支付/领取
-    private String pay_time;//
-    private String end_time;//截止时间
-    private Integer is_send;//
-    private Integer is_receive;//是否收货
-    private Integer is_overdue;//是否过期
-    private Integer is_active;//
-    private String created_user;//
-    private String created_time;//
-    private String modified_user;//
-    private String modified_time;//
+    private String roundId;//轮次ID
+    private String bidName;//买受人昵称
+    private String bidHead;//买受人头像
+    private String productId;//商品id
+    private String orderId;//
+    private float bidPrice;//成交价
+    private Integer isPay;//是否支付/领取
+    private String payTime;//
+    private String endTime;//截止时间
+    private Integer isSend;//
+    private Integer isReceive;//是否收货
+    private Integer isOverdue;//是否过期
+    private Integer isActive;//
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedUser;//
+    private String modifiedTime;//
 
     public Integer getId() {
         return id;
@@ -28,139 +28,139 @@ public class vendee {
         this.id = id;
     }
 
-    public String getRound_id() {
-        return round_id;
+    public String getRoundId() {
+        return roundId;
     }
 
-    public void setRound_id(String round_id) {
-        this.round_id = round_id;
+    public void setRoundId(String roundId) {
+        this.roundId = roundId;
     }
 
-    public String getBid_name() {
-        return bid_name;
+    public String getBidName() {
+        return bidName;
     }
 
-    public void setBid_name(String bid_name) {
-        this.bid_name = bid_name;
+    public void setBidName(String bidName) {
+        this.bidName = bidName;
     }
 
-    public String getBid_head() {
-        return bid_head;
+    public String getBidHead() {
+        return bidHead;
     }
 
-    public void setBid_head(String bid_head) {
-        this.bid_head = bid_head;
+    public void setBidHead(String bidHead) {
+        this.bidHead = bidHead;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
-    public String getOrder_id() {
-        return order_id;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(String order_id) {
-        this.order_id = order_id;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
-    public float getBid_price() {
-        return bid_price;
+    public float getBidPrice() {
+        return bidPrice;
     }
 
-    public void setBid_price(float bid_price) {
-        this.bid_price = bid_price;
+    public void setBidPrice(float bidPrice) {
+        this.bidPrice = bidPrice;
     }
 
-    public Integer getIs_pay() {
-        return is_pay;
+    public Integer getIsPay() {
+        return isPay;
     }
 
-    public void setIs_pay(Integer is_pay) {
-        this.is_pay = is_pay;
+    public void setIsPay(Integer isPay) {
+        this.isPay = isPay;
     }
 
-    public String getPay_time() {
-        return pay_time;
+    public String getPayTime() {
+        return payTime;
     }
 
-    public void setPay_time(String pay_time) {
-        this.pay_time = pay_time;
+    public void setPayTime(String payTime) {
+        this.payTime = payTime;
     }
 
-    public String getEnd_time() {
-        return end_time;
+    public String getEndTime() {
+        return endTime;
     }
 
-    public void setEnd_time(String end_time) {
-        this.end_time = end_time;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
-    public Integer getIs_send() {
-        return is_send;
+    public Integer getIsSend() {
+        return isSend;
     }
 
-    public void setIs_send(Integer is_send) {
-        this.is_send = is_send;
+    public void setIsSend(Integer isSend) {
+        this.isSend = isSend;
     }
 
-    public Integer getIs_receive() {
-        return is_receive;
+    public Integer getIsReceive() {
+        return isReceive;
     }
 
-    public void setIs_receive(Integer is_receive) {
-        this.is_receive = is_receive;
+    public void setIsReceive(Integer isReceive) {
+        this.isReceive = isReceive;
     }
 
-    public Integer getIs_overdue() {
-        return is_overdue;
+    public Integer getIsOverdue() {
+        return isOverdue;
     }
 
-    public void setIs_overdue(Integer is_overdue) {
-        this.is_overdue = is_overdue;
+    public void setIsOverdue(Integer isOverdue) {
+        this.isOverdue = isOverdue;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }

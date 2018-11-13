@@ -2,30 +2,30 @@ package com.hwkp.model;
 
 public class order {
     private Integer id;
-    private String order_id;//
-    private String transaction_id;//
-    private String round_id;//轮次id
-    private String product_id;//
-    private String zip_code;//
-    private String province_name;//
-    private String city_name;//
-    private String county_name;//
-    private String detail_info;//
-    private String tel_number;//
-    private String user_name;//
-    private String wx_openid;//
-    private String nonce_str;//
-    private Integer is_paid;//
-    private String paid_time;//
-    private String pay_result;//
-    private String express_num;//
-    private Integer is_send;//
-    private String send_time;//
-    private Integer is_active;//
-    private String created_user;//
-    private String created_time;//
-    private String modified_user;//
-    private String modified_time;//
+    private String orderId;//
+    private String transactionId;//
+    private String roundId;//轮次id
+    private String productId;//
+    private String zipCode;//
+    private String provinceName;//
+    private String cityName;//
+    private String countyName;//
+    private String detailInfo;//
+    private String telNumber;//
+    private String userName;//
+    private String wxOpenid;//
+    private String nonceStr;//
+    private Integer isPaid;//
+    private String paidTime;//
+    private String payResult;//
+    private String expressNum;//
+    private Integer isSend;//
+    private String sendTime;//
+    private Integer isActive;//
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedUser;//
+    private String modifiedTime;//
 
     public Integer getId() {
         return id;
@@ -35,195 +35,195 @@ public class order {
         this.id = id;
     }
 
-    public String getOrder_id() {
-        return order_id;
+    public String getOrderId() {
+        return orderId;
     }
 
-    public void setOrder_id(String order_id) {
-        this.order_id = order_id;
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 
-    public String getTransaction_id() {
-        return transaction_id;
+    public String getTransactionId() {
+        return transactionId;
     }
 
-    public void setTransaction_id(String transaction_id) {
-        this.transaction_id = transaction_id;
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
     }
 
-    public String getRound_id() {
-        return round_id;
+    public String getRoundId() {
+        return roundId;
     }
 
-    public void setRound_id(String round_id) {
-        this.round_id = round_id;
+    public void setRoundId(String roundId) {
+        this.roundId = roundId;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
-    public String getZip_code() {
-        return zip_code;
+    public String getZipCode() {
+        return zipCode;
     }
 
-    public void setZip_code(String zip_code) {
-        this.zip_code = zip_code;
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
-    public String getProvince_name() {
-        return province_name;
+    public String getProvinceName() {
+        return provinceName;
     }
 
-    public void setProvince_name(String province_name) {
-        this.province_name = province_name;
+    public void setProvinceName(String provinceName) {
+        this.provinceName = provinceName;
     }
 
-    public String getCity_name() {
-        return city_name;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
-    public String getCounty_name() {
-        return county_name;
+    public String getCountyName() {
+        return countyName;
     }
 
-    public void setCounty_name(String county_name) {
-        this.county_name = county_name;
+    public void setCountyName(String countyName) {
+        this.countyName = countyName;
     }
 
-    public String getDetail_info() {
-        return detail_info;
+    public String getDetailInfo() {
+        return detailInfo;
     }
 
-    public void setDetail_info(String detail_info) {
-        this.detail_info = detail_info;
+    public void setDetailInfo(String detailInfo) {
+        this.detailInfo = detailInfo;
     }
 
-    public String getTel_number() {
-        return tel_number;
+    public String getTelNumber() {
+        return telNumber;
     }
 
-    public void setTel_number(String tel_number) {
-        this.tel_number = tel_number;
+    public void setTelNumber(String telNumber) {
+        this.telNumber = telNumber;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getWx_openid() {
-        return wx_openid;
+    public String getWxOpenid() {
+        return wxOpenid;
     }
 
-    public void setWx_openid(String wx_openid) {
-        this.wx_openid = wx_openid;
+    public void setWxOpenid(String wxOpenid) {
+        this.wxOpenid = wxOpenid;
     }
 
-    public String getNonce_str() {
-        return nonce_str;
+    public String getNonceStr() {
+        return nonceStr;
     }
 
-    public void setNonce_str(String nonce_str) {
-        this.nonce_str = nonce_str;
+    public void setNonceStr(String nonceStr) {
+        this.nonceStr = nonceStr;
     }
 
-    public Integer getIs_paid() {
-        return is_paid;
+    public Integer getIsPaid() {
+        return isPaid;
     }
 
-    public void setIs_paid(Integer is_paid) {
-        this.is_paid = is_paid;
+    public void setIsPaid(Integer isPaid) {
+        this.isPaid = isPaid;
     }
 
-    public String getPaid_time() {
-        return paid_time;
+    public String getPaidTime() {
+        return paidTime;
     }
 
-    public void setPaid_time(String paid_time) {
-        this.paid_time = paid_time;
+    public void setPaidTime(String paidTime) {
+        this.paidTime = paidTime;
     }
 
-    public String getPay_result() {
-        return pay_result;
+    public String getPayResult() {
+        return payResult;
     }
 
-    public void setPay_result(String pay_result) {
-        this.pay_result = pay_result;
+    public void setPayResult(String payResult) {
+        this.payResult = payResult;
     }
 
-    public String getExpress_num() {
-        return express_num;
+    public String getExpressNum() {
+        return expressNum;
     }
 
-    public void setExpress_num(String express_num) {
-        this.express_num = express_num;
+    public void setExpressNum(String expressNum) {
+        this.expressNum = expressNum;
     }
 
-    public Integer getIs_send() {
-        return is_send;
+    public Integer getIsSend() {
+        return isSend;
     }
 
-    public void setIs_send(Integer is_send) {
-        this.is_send = is_send;
+    public void setIsSend(Integer isSend) {
+        this.isSend = isSend;
     }
 
-    public String getSend_time() {
-        return send_time;
+    public String getSendTime() {
+        return sendTime;
     }
 
-    public void setSend_time(String send_time) {
-        this.send_time = send_time;
+    public void setSendTime(String sendTime) {
+        this.sendTime = sendTime;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }

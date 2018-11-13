@@ -2,18 +2,18 @@ package com.hwkp.model;
 
 public class address {
     private Integer no;
-    private String user_name;//收货人姓名
-    private String postal_code;//邮编
-    private String province_came;//国标收货地址第一级地址
-    private String city_name;//国标收货地址第二级地址
-    private String county_name;//
-    private String detail_info;//详细收货地址信息
-    private String national_code;//收货地址国家码
-    private String tel_number;//收货人手机号码
-    private String created_user;//
-    private String created_time;//
-    private String modified_user;//
-    private String modified_time;//
+    private String userName;//收货人姓名
+    private String postalCode;//邮编
+    private String provinceCame;//国标收货地址第一级地址
+    private String cityName;//国标收货地址第二级地址
+    private String countyName;//
+    private String detailInfo;//详细收货地址信息
+    private String nationalCode;//收货地址国家码
+    private String telNumber;//收货人手机号码
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedUser;//
+    private String modifiedTime;//
 
     public Integer getNo() {
         return no;
@@ -23,99 +23,99 @@ public class address {
         this.no = no;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getPostal_code() {
-        return postal_code;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setPostal_code(String postal_code) {
-        this.postal_code = postal_code;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
-    public String getProvince_came() {
-        return province_came;
+    public String getProvinceCame() {
+        return provinceCame;
     }
 
-    public void setProvince_came(String province_came) {
-        this.province_came = province_came;
+    public void setProvinceCame(String provinceCame) {
+        this.provinceCame = provinceCame;
     }
 
-    public String getCity_name() {
-        return city_name;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 
-    public String getCounty_name() {
-        return county_name;
+    public String getCountyName() {
+        return countyName;
     }
 
-    public void setCounty_name(String county_name) {
-        this.county_name = county_name;
+    public void setCountyName(String countyName) {
+        this.countyName = countyName;
     }
 
-    public String getDetail_info() {
-        return detail_info;
+    public String getDetailInfo() {
+        return detailInfo;
     }
 
-    public void setDetail_info(String detail_info) {
-        this.detail_info = detail_info;
+    public void setDetailInfo(String detailInfo) {
+        this.detailInfo = detailInfo;
     }
 
-    public String getNational_code() {
-        return national_code;
+    public String getNationalCode() {
+        return nationalCode;
     }
 
-    public void setNational_code(String national_code) {
-        this.national_code = national_code;
+    public void setNationalCode(String nationalCode) {
+        this.nationalCode = nationalCode;
     }
 
-    public String getTel_number() {
-        return tel_number;
+    public String getTelNumber() {
+        return telNumber;
     }
 
-    public void setTel_number(String tel_number) {
-        this.tel_number = tel_number;
+    public void setTelNumber(String telNumber) {
+        this.telNumber = telNumber;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }

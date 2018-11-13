@@ -2,18 +2,18 @@ package com.hwkp.model;
 
 public class product {
     private Integer no;
-    private String  product_id;
+    private String productId;
     private String cover;
-    private String pro_name;
-    private String pro_abstract;//摘要
-    private String pro_introduction;//json介绍
-    private float pro_original_price;//原价
-    private float express_fee;//快递费
-    private Integer is_active;
-    private String created_user;//
-    private String created_time;//
-    private String modified_user;//
-    private String modified_time;//
+    private String proName;
+    private String proAbstract;//摘要
+    private String proIntroduction;//json介绍
+    private float proOriginalPrice;//原价
+    private float expressFee;//快递费
+    private Integer isActive;
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedUser;//
+    private String modifiedTime;//
 
     public Integer getNo() {
         return no;
@@ -23,12 +23,12 @@ public class product {
         this.no = no;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
     public String getCover() {
@@ -39,83 +39,83 @@ public class product {
         this.cover = cover;
     }
 
-    public String getPro_name() {
-        return pro_name;
+    public String getProName() {
+        return proName;
     }
 
-    public void setPro_name(String pro_name) {
-        this.pro_name = pro_name;
+    public void setProName(String proName) {
+        this.proName = proName;
     }
 
-    public String getPro_abstract() {
-        return pro_abstract;
+    public String getProAbstract() {
+        return proAbstract;
     }
 
-    public void setPro_abstract(String pro_abstract) {
-        this.pro_abstract = pro_abstract;
+    public void setProAbstract(String proAbstract) {
+        this.proAbstract = proAbstract;
     }
 
-    public String getPro_introduction() {
-        return pro_introduction;
+    public String getProIntroduction() {
+        return proIntroduction;
     }
 
-    public void setPro_introduction(String pro_introduction) {
-        this.pro_introduction = pro_introduction;
+    public void setProIntroduction(String proIntroduction) {
+        this.proIntroduction = proIntroduction;
     }
 
-    public float getPro_original_price() {
-        return pro_original_price;
+    public float getProOriginal_price() {
+        return proOriginalPrice;
     }
 
-    public void setPro_original_price(float pro_original_price) {
-        this.pro_original_price = pro_original_price;
+    public void setProOriginal_price(float proOriginalPrice) {
+        this.proOriginalPrice = proOriginalPrice;
     }
 
-    public float getExpress_fee() {
-        return express_fee;
+    public float getExpressFee() {
+        return expressFee;
     }
 
-    public void setExpress_fee(float express_fee) {
-        this.express_fee = express_fee;
+    public void setExpressFee(float expressFee) {
+        this.expressFee = expressFee;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }
