@@ -1,13 +1,13 @@
 package com.hwkp.model;
 
-public class auctionCategory {
+public class AuctionCategory {
     private Integer id;
-    private String category_id;//类别id
-    private  String category_name;//类别名称
-    private  Integer is_active;
-    private  String created_user;
-    private  String modified_user;
-    private  String modified_time;
+    private String categoryId;//类别id
+    private  String categoryName;//类别名称
+    private  Integer isActive;
+    private  String createdUser;
+    private  String modifiedUser;
+    private  String modifiedTime;
 
     public Integer getId() {
         return id;
@@ -17,51 +17,51 @@ public class auctionCategory {
         this.id = id;
     }
 
-    public String getCategory_id() {
-        return category_id;
+    public String getCategoryId() {
+        return categoryId;
     }
 
-    public void setCategory_id(String category_id) {
-        this.category_id = category_id;
+    public void setCategoryId(String categoryId) {
+        this.categoryId = categoryId;
     }
 
-    public String getCategory_name() {
-        return category_name;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory_name(String category_name) {
-        this.category_name = category_name;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }

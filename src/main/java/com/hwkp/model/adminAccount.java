@@ -1,21 +1,21 @@
 package com.hwkp.model;
 
-public class adminAccount {
+public class AdminAccount {
     private  Integer no;
-    private  String user_id;
-    private  String wx_openid;
+    private  String userId;
+    private  String wxOpenid;
     private  String account;
     private  String password;
-    private  String head_url;
-    private  String user_name;
+    private  String headUrl;
+    private  String userName;
     private  Integer permission;
-    private  String last_login_time;
-    private  Integer is_banded;
-    private  Integer is_active;
-    private String created_user;//
-    private String created_time;//
-    private String modified_user;//
-    private String modified_time;//
+    private  String lastLoginTime;
+    private  Integer isBanded;
+    private  Integer isActive;
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedUser;//
+    private String modifiedTime;//
 
     public Integer getNo() {
         return no;
@@ -25,20 +25,20 @@ public class adminAccount {
         this.no = no;
     }
 
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getWx_openid() {
-        return wx_openid;
+    public String getWxOpenid() {
+        return wxOpenid;
     }
 
-    public void setWx_openid(String wx_openid) {
-        this.wx_openid = wx_openid;
+    public void setWxOpenid(String wxOpenid) {
+        this.wxOpenid = wxOpenid;
     }
 
     public String getAccount() {
@@ -57,20 +57,20 @@ public class adminAccount {
         this.password = password;
     }
 
-    public String getHead_url() {
-        return head_url;
+    public String getHeadUrl() {
+        return headUrl;
     }
 
-    public void setHead_url(String head_url) {
-        this.head_url = head_url;
+    public void setHeadUrl(String headUrl) {
+        this.headUrl = headUrl;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Integer getPermission() {
@@ -81,59 +81,59 @@ public class adminAccount {
         this.permission = permission;
     }
 
-    public String getLast_login_time() {
-        return last_login_time;
+    public String getLastLoginTime() {
+        return lastLoginTime;
     }
 
-    public void setLast_login_time(String last_login_time) {
-        this.last_login_time = last_login_time;
+    public void setLastLoginTime(String lastLoginTime) {
+        this.lastLoginTime = lastLoginTime;
     }
 
-    public Integer getIs_banded() {
-        return is_banded;
+    public Integer getIsBanded() {
+        return isBanded;
     }
 
-    public void setIs_banded(Integer is_banded) {
-        this.is_banded = is_banded;
+    public void setIsBanded(Integer isBanded) {
+        this.isBanded = isBanded;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getCreated_time() {
-        return created_time;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreated_time(String created_time) {
-        this.created_time = created_time;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getModifiedUser() {
+        return modifiedUser;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setModifiedUser(String modifiedUser) {
+        this.modifiedUser = modifiedUser;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }

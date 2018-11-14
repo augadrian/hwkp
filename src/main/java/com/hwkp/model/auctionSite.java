@@ -1,31 +1,31 @@
 package com.hwkp.model;
 
-public class auctionSite {
-    private  Integer no;
-    private  String auction_id;//拍卖位ID
-    private  String title;//标题
-    private  String share_title;//前端分享标题
-    private  String share_img;//前端分享图片
-    private  String product_id;//奖品编号
-    private  Integer total_round;//总轮次 总共拍卖多少轮
-    private  Integer cur_round;//当前轮次，第几轮拍卖
-    private  String cur_round_id;//当前轮次id
-    private  Integer bid_increment;//加价幅度
-    private  float begin_price;//起拍价
-    private  float min_price;//最低价，保留价
-    private  float max_price;//封顶价
-    private  float deposit;//保证金
-    private  Integer priority_lev;//优先级 降序
-    private  Integer type;//1：新人专享 2：热拍
-    private  Integer round_interval;//单轮间隔时间 毫秒数
-    private  Integer round_duration;//单轮持续时间 毫秒数
-    private  Integer is_close;//拍卖位是否关闭
-    private  Integer is_published;//是否发布
-    private  String publish_time;//
-    private  Integer is_active;//是否删除
-    private  String created_user;//
-    private  String modified_user;//
-    private  String modified_time;//
+public class AuctionSite {
+    private Integer no;
+    private String auctionId;//拍卖位ID
+    private String title;//标题
+    private String shareTitle;//前端分享标题
+    private String shareImg;//前端分享图片
+    private String productId;//奖品编号
+    private Integer totalRound;//总轮次 总共拍卖多少轮
+    private Integer curRound;//当前轮次，第几轮拍卖
+    private String curRoundId;//当前轮次id
+    private Integer bidIncrement;//加价幅度
+    private float beginPrice;//起拍价
+    private float minPrice;//最低价，保留价
+    private float maxPrice;//封顶价
+    private float deposit;//保证金
+    private Integer priorityLev;//优先级 降序
+    private Integer type;//1：新人专享 2：热拍
+    private Integer roundInterval;//单轮间隔时间 毫秒数
+    private Integer roundDuration;//单轮持续时间 毫秒数
+    private Integer isClose;//拍卖位是否关闭
+    private Integer isPublished;//是否发布
+    private String publishTime;//
+    private Integer isActive;//是否删除
+    private String createdUser;//
+    private String createdTime;//
+    private String modifiedTime;//
 
     public Integer getNo() {
         return no;
@@ -35,12 +35,12 @@ public class auctionSite {
         this.no = no;
     }
 
-    public String getAuction_id() {
-        return auction_id;
+    public String getAuctionId() {
+        return auctionId;
     }
 
-    public void setAuction_id(String auction_id) {
-        this.auction_id = auction_id;
+    public void setAuctionId(String auctionId) {
+        this.auctionId = auctionId;
     }
 
     public String getTitle() {
@@ -51,84 +51,84 @@ public class auctionSite {
         this.title = title;
     }
 
-    public String getShare_title() {
-        return share_title;
+    public String getShareTitle() {
+        return shareTitle;
     }
 
-    public void setShare_title(String share_title) {
-        this.share_title = share_title;
+    public void setShareTitle(String shareTitle) {
+        this.shareTitle = shareTitle;
     }
 
-    public String getShare_img() {
-        return share_img;
+    public String getShareImg() {
+        return shareImg;
     }
 
-    public void setShare_img(String share_img) {
-        this.share_img = share_img;
+    public void setShareImg(String shareImg) {
+        this.shareImg = shareImg;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getProductId() {
+        return productId;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setProductId(String productId) {
+        this.productId = productId;
     }
 
-    public Integer getTotal_round() {
-        return total_round;
+    public Integer getTotalRound() {
+        return totalRound;
     }
 
-    public void setTotal_round(Integer total_round) {
-        this.total_round = total_round;
+    public void setTotalRound(Integer totalRound) {
+        this.totalRound = totalRound;
     }
 
-    public Integer getCur_round() {
-        return cur_round;
+    public Integer getCurRound() {
+        return curRound;
     }
 
-    public void setCur_round(Integer cur_round) {
-        this.cur_round = cur_round;
+    public void setCurRound(Integer curRound) {
+        this.curRound = curRound;
     }
 
-    public String getCur_round_id() {
-        return cur_round_id;
+    public String getCurRoundId() {
+        return curRoundId;
     }
 
-    public void setCur_round_id(String cur_round_id) {
-        this.cur_round_id = cur_round_id;
+    public void setCurRoundId(String curRoundId) {
+        this.curRoundId = curRoundId;
     }
 
-    public Integer getBid_increment() {
-        return bid_increment;
+    public Integer getBidIncrement() {
+        return bidIncrement;
     }
 
-    public void setBid_increment(Integer bid_increment) {
-        this.bid_increment = bid_increment;
+    public void setBidIncrement(Integer bidIncrement) {
+        this.bidIncrement = bidIncrement;
     }
 
-    public float getBegin_price() {
-        return begin_price;
+    public float getBeginPrice() {
+        return beginPrice;
     }
 
-    public void setBegin_price(float begin_price) {
-        this.begin_price = begin_price;
+    public void setBeginPrice(float beginPrice) {
+        this.beginPrice = beginPrice;
     }
 
-    public float getMin_price() {
-        return min_price;
+    public float getMinPrice() {
+        return minPrice;
     }
 
-    public void setMin_price(float min_price) {
-        this.min_price = min_price;
+    public void setMinPrice(float minPrice) {
+        this.minPrice = minPrice;
     }
 
-    public float getMax_price() {
-        return max_price;
+    public float getMaxPrice() {
+        return maxPrice;
     }
 
-    public void setMax_price(float max_price) {
-        this.max_price = max_price;
+    public void setMaxPrice(float maxPrice) {
+        this.maxPrice = maxPrice;
     }
 
     public float getDeposit() {
@@ -139,12 +139,12 @@ public class auctionSite {
         this.deposit = deposit;
     }
 
-    public Integer getPriority_lev() {
-        return priority_lev;
+    public Integer getPriorityLev() {
+        return priorityLev;
     }
 
-    public void setPriority_lev(Integer priority_lev) {
-        this.priority_lev = priority_lev;
+    public void setPriorityLev(Integer priorityLev) {
+        this.priorityLev = priorityLev;
     }
 
     public Integer getType() {
@@ -155,75 +155,75 @@ public class auctionSite {
         this.type = type;
     }
 
-    public Integer getRound_interval() {
-        return round_interval;
+    public Integer getRoundInterval() {
+        return roundInterval;
     }
 
-    public void setRound_interval(Integer round_interval) {
-        this.round_interval = round_interval;
+    public void setRoundInterval(Integer roundInterval) {
+        this.roundInterval = roundInterval;
     }
 
-    public Integer getRound_duration() {
-        return round_duration;
+    public Integer getRoundDuration() {
+        return roundDuration;
     }
 
-    public void setRound_duration(Integer round_duration) {
-        this.round_duration = round_duration;
+    public void setRoundDuration(Integer roundDuration) {
+        this.roundDuration = roundDuration;
     }
 
-    public Integer getIs_close() {
-        return is_close;
+    public Integer getIsClose() {
+        return isClose;
     }
 
-    public void setIs_close(Integer is_close) {
-        this.is_close = is_close;
+    public void setIsClose(Integer isClose) {
+        this.isClose = isClose;
     }
 
-    public Integer getIs_published() {
-        return is_published;
+    public Integer getIsPublished() {
+        return isPublished;
     }
 
-    public void setIs_published(Integer is_published) {
-        this.is_published = is_published;
+    public void setIsPublished(Integer isPublished) {
+        this.isPublished = isPublished;
     }
 
-    public String getPublish_time() {
-        return publish_time;
+    public String getPublishTime() {
+        return publishTime;
     }
 
-    public void setPublish_time(String publish_time) {
-        this.publish_time = publish_time;
+    public void setPublishTime(String publishTime) {
+        this.publishTime = publishTime;
     }
 
-    public Integer getIs_active() {
-        return is_active;
+    public Integer getIsActive() {
+        return isActive;
     }
 
-    public void setIs_active(Integer is_active) {
-        this.is_active = is_active;
+    public void setIsActive(Integer isActive) {
+        this.isActive = isActive;
     }
 
-    public String getCreated_user() {
-        return created_user;
+    public String getCreatedUser() {
+        return createdUser;
     }
 
-    public void setCreated_user(String created_user) {
-        this.created_user = created_user;
+    public void setCreatedUser(String createdUser) {
+        this.createdUser = createdUser;
     }
 
-    public String getModified_user() {
-        return modified_user;
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setModified_user(String modified_user) {
-        this.modified_user = modified_user;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
-    public String getModified_time() {
-        return modified_time;
+    public String getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(String modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(String modifiedTime) {
+        this.modifiedTime = modifiedTime;
     }
 }
