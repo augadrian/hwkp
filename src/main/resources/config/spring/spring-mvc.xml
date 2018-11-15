@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+
+       ">
+
+
+
+    <!--自动扫描控制器-->
+    <context:component-scan base-package="com.hwkp"/>
+
+    <!-- 开启注解 -->
+    <mvc:annotation-driven />
+
+    <!--视图渲染-->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/views/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--扫描项目中的properties属性文件，用来在类中用注解读取属性值-->
+    <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:/config/properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean class="com.hwkp.util.UTF8StringHttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+
+    <!-- 配置springMVC处理上传文件的信息 -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8"/>
+        <property name="maxUploadSize" value="10485760000"/>
+        <property name="maxInMemorySize" value="40960"/>
+    </bean>
+
+    <!--<bean id="multipartResolver"-->
+    <!--class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >-->
+    <!--<property name="defaultEncoding" value="utf-8"/> &lt;!&ndash; 默认编码 (UTF-8) &ndash;&gt;-->
+    <!--<property name="maxInMemorySize" value="10240"/> &lt;!&ndash; 最大内存大小 (10240)&ndash;&gt;-->
+    <!--<property name="uploadTempDir" value="/upload"/> &lt;!&ndash; 上传后的目录名 (WebUtils#TEMP_DIR_CONTEXT_ATTRIBUTE) &ndash;&gt;-->
+    <!--<property name="maxUploadSize" value="-1"/> &lt;!&ndash; 最大文件大小，-1为无限止(-1) &ndash;&gt;-->
+    <!--</bean>-->
+
+    <!-- 静态资源(js/*)的访问 -->
+    <!--<mvc:resources mapping="/js/**" location="/statics/js/"/>-->
+    <!--<mvc:resources mapping="/css/**" location="/statics/css/"/>-->
+    <!--<mvc:resources mapping="/images/**" location="/statics/images/"/>-->
+    <!--<mvc:resources location="/" mapping="/**/*.html"/>-->
+    <!--<mvc:interceptors>-->
+    <!--<bean class=""></bean>-->
+    <!--</mvc:interceptors>-->
+</beans>

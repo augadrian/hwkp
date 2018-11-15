@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hwkp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="hwkp.war">
+      <element id="artifact" artifact-name="hwkp:war exploded" />
+    </root>
+  </artifact>
+</component>
