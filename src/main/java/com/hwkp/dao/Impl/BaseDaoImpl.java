@@ -16,7 +16,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public T find(Class<T> clazz,Serializable id) {
+	public T findById(Class<T> clazz,Serializable id) {
 		this.sessionFactory.getCurrentSession().flush();
 		return (T) this.sessionFactory.getCurrentSession().get(clazz, id);
 	}
@@ -29,9 +29,10 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 	}
 
 	@Override
-	public void update(T t) {
+	public T update(T t) {
 		this.sessionFactory.getCurrentSession().flush();
-		this.sessionFactory.getCurrentSession().update(t);
+	    this.sessionFactory.getCurrentSession().update(t);
+	    return t;
 	}
 	public void saveOrUpdate(T t) {
 		this.sessionFactory.getCurrentSession().flush();

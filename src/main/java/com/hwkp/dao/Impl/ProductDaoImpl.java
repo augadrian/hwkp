@@ -18,7 +18,7 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
     }
 
     @Override
-    public void update(ProductEntity productEntity) {
+    public ProductEntity update(ProductEntity productEntity) {
         StringBuffer hq=new StringBuffer("update b_product b set no=no" );
         if(productEntity.getProductId()!=null){
             hq.append(",b.product_id="+productEntity.getProductId());
@@ -45,6 +45,9 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
         } if(productEntity.getModifiedTime()!=null){
             hq.append(",b.modified_time="+productEntity.getModifiedTime());
         }
+        String hql = hq + " where a.no =" + productEntity.getNo() + "";
+
+        return this.sessionFactory.getCurrentSession().createQuery(hql).executeUpdate() > 0?this.findById(productEntity.getNo()):null;
     }
 
     @Override
@@ -54,7 +57,7 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
 
     @Override
     public ProductEntity findById(Integer id) {
-        return null;
+        return (ProductEntity) super.findById(ProductEntity.class,id);
     }
 
     @Override

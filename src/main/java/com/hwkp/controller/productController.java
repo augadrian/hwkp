@@ -41,14 +41,40 @@ public class productController {
 
     @ResponseBody
     @RequestMapping("/delProduct")
-    public String delProduct(Integer id){
-      return null;
+    public String delProduct(Integer id)throws IOException{
+      ProductEntity productEntity=productService.findById(id);
+      if(productEntity!=null){
+        productService.delete(productEntity);
+        jsonResult.setStatus(200);
+        jsonResult.setMessage("删除成功");
+      }else{
+        jsonResult.setStatus(500);
+        jsonResult.setMessage("删除失败");
+      }
+      return mapToJson.writeValueAsString(jsonResult);
     }
 
     @ResponseBody
     @RequestMapping("/updateProduct")
-    public String updateProduct(ProductEntity productEntity){
-      return null;
+    public String updateProduct(String productObj)throws IOException{
+      ProductEntity productEntity=mapToJson.readValue(productObj,ProductEntity.class);
+
+      if (productService.findById(productEntity.getNo()) == null) {
+
+        if (this.productService.update(productEntity) != null) {
+          jsonResult.setStatus(Integer.valueOf(200));
+          jsonResult.setMessage("修改成功");
+
+        } else {
+          jsonResult.setStatus(Integer.valueOf(500));
+          jsonResult.setMessage("修改失败");
+        }
+      }else{
+        jsonResult.setStatus(500);
+        jsonResult.setMessage("修改失败,帐号重名");
+      }
+
+      return this.mapToJson.writeValueAsString(jsonResult);
     }
 
 }

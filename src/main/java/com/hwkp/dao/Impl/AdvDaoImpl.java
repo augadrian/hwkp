@@ -3,6 +3,7 @@ package com.hwkp.dao.Impl;
 import com.hwkp.dao.AdvDao;
 import com.hwkp.dao.BaseDao;
 import com.hwkp.entity.AdvEntity;
+import com.hwkp.entity.ProductEntity;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,7 +16,7 @@ import java.util.Map;
 public class AdvDaoImpl extends BaseDaoImpl<AdvEntity> implements AdvDao {
 
     @Override
-    public void update(AdvEntity advEntity) {
+    public AdvEntity update(AdvEntity advEntity) {
         StringBuffer hq=new StringBuffer("update b_adv b set id=id");
         if(advEntity.getType()!=null){
             hq.append(",b.type="+advEntity.getType());
@@ -33,7 +34,7 @@ public class AdvDaoImpl extends BaseDaoImpl<AdvEntity> implements AdvDao {
         } if(advEntity.getModifiedUser()!=null){
             hq.append(",b.modified_user="+advEntity.getModifiedUser());
         }
-
+    return null;
     }
     @Override
      public void save(AdvEntity advEntity){
@@ -47,8 +48,8 @@ public class AdvDaoImpl extends BaseDaoImpl<AdvEntity> implements AdvDao {
     }
 
     @Override
-    public AdvEntity findById(Integer id) {
-        return (AdvEntity) this.sessionFactory.getCurrentSession().createQuery("select from b_adv where no=id");
+    public AdvEntity findById(Integer no) {
+        return (AdvEntity)super.findById(AdvEntity.class,no);
     }
 
     @Override

@@ -11,8 +11,8 @@ import java.util.Map;
 public interface ProductService  {
 
     void save(ProductEntity productEntity);
-    void update(ProductEntity productEntity);
+    ProductEntity update(ProductEntity productEntity);
     void delete(ProductEntity productEntity);
-    ProductEntity findById(ProductEntity productEntity);
+    ProductEntity findById(Integer id);
     List<ProductEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
 }

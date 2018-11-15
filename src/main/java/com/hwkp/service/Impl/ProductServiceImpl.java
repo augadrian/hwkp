@@ -26,8 +26,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public void update(ProductEntity productEntity) {
-          productDao.update(productEntity);
+    public ProductEntity update(ProductEntity productEntity) {
+        return   productDao.update(productEntity);
     }
 
     @Override
@@ -36,8 +36,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductEntity findById(ProductEntity productEntity) {
-        return null;
+    public ProductEntity findById(Integer id) {
+        return productDao.findById(id);
     }
 
     @Override
