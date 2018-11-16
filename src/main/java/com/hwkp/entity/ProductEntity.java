@@ -1,5 +1,10 @@
 package com.hwkp.entity;
 
+
+import javax.persistence.*;
+import java.math.BigDecimal;
+@Entity
+@Table(name="b_product")
 public class ProductEntity {
     private Integer no;
     private String productId;
@@ -7,14 +12,17 @@ public class ProductEntity {
     private String proName;
     private String proAbstract;//摘要
     private String proIntroduction;//json介绍
-    private float proOriginalPrice;//原价
-    private float expressFee;//快递费
+    private BigDecimal proOriginalPrice;//原价
+    private BigDecimal expressFee;//快递费
     private Integer isActive;
     private String createdUser;//
     private String createdTime;//
     private String modifiedUser;//
     private String modifiedTime;//
 
+    @Id
+    @Column(name = "no", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer getNo() {
         return no;
     }
@@ -23,6 +31,8 @@ public class ProductEntity {
         this.no = no;
     }
 
+
+    @Column(name = "product_id", unique = true, nullable = false)
     public String getProductId() {
         return productId;
     }
@@ -30,7 +40,7 @@ public class ProductEntity {
     public void setProductId(String productId) {
         this.productId = productId;
     }
-
+    @Column(name = "cover", unique = true, nullable = false)
     public String getCover() {
         return cover;
     }
@@ -39,6 +49,7 @@ public class ProductEntity {
         this.cover = cover;
     }
 
+    @Column(name = "pro_name", unique = true, nullable = false)
     public String getProName() {
         return proName;
     }
@@ -47,6 +58,7 @@ public class ProductEntity {
         this.proName = proName;
     }
 
+    @Column(name = "pro_abstract", unique = true, nullable = false)
     public String getProAbstract() {
         return proAbstract;
     }
@@ -55,6 +67,7 @@ public class ProductEntity {
         this.proAbstract = proAbstract;
     }
 
+    @Column(name = "pro_introduction", unique = true, nullable = false)
     public String getProIntroduction() {
         return proIntroduction;
     }
@@ -63,22 +76,23 @@ public class ProductEntity {
         this.proIntroduction = proIntroduction;
     }
 
-    public float getProOriginal_price() {
+    @Column(name = "pro_original_price", unique = true, nullable = false)
+    public BigDecimal getProOriginalPrice() {
         return proOriginalPrice;
     }
 
-    public void setProOriginal_price(float proOriginalPrice) {
+    public void setProOriginalPrice(BigDecimal proOriginalPrice) {
         this.proOriginalPrice = proOriginalPrice;
     }
-
-    public float getExpressFee() {
+    @Column(name = "express_fee", unique = true, nullable = false)
+    public BigDecimal getExpressFee() {
         return expressFee;
     }
 
-    public void setExpressFee(float expressFee) {
+    public void setExpressFee(BigDecimal expressFee) {
         this.expressFee = expressFee;
     }
-
+    @Column(name = "is_active", unique = true, nullable = false)
     public Integer getIsActive() {
         return isActive;
     }

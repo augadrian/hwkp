@@ -8,8 +8,8 @@ import java.util.Map;
 public interface SysAdminAccountService   {
 
     void save(SysAdminAccountEntity sysAdminAccountEntity);
-    void update(SysAdminAccountEntity sysAdminAccountEntity);
+    SysAdminAccountEntity update(SysAdminAccountEntity sysAdminAccountEntity);
     void delete(SysAdminAccountEntity sysAdminAccountEntity);
-    SysAdminAccountEntity findById(SysAdminAccountEntity sysAdminAccountEntity);
+    SysAdminAccountEntity findById(Integer id);
     List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
 }

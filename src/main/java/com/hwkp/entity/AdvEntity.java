@@ -1,5 +1,9 @@
 package com.hwkp.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="b_adv")
 public class AdvEntity {
      private Integer id;//
      private String type;//0 首页轮播 1 财富榜广告 2 我的界面底部广告 3 钱包金额界面广告 4 保证金界面广告 5 退款界面广告
@@ -11,6 +15,9 @@ public class AdvEntity {
      private  String modifiedUser;//
      private  String modifiedTime;//
 
+    @Id
+    @Column(name = "id", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer getId() {
         return id;
     }
@@ -19,6 +26,7 @@ public class AdvEntity {
         this.id = id;
     }
 
+    @Column(name = "type", unique = true, nullable = false)
     public String getType() {
         return type;
     }
@@ -27,6 +35,7 @@ public class AdvEntity {
         this.type = type;
     }
 
+    @Column(name = "advertise", unique = true, nullable = false)
     public String getAdvertise() {
         return advertise;
     }
@@ -34,7 +43,7 @@ public class AdvEntity {
     public void setAdvertise(String advertise) {
         this.advertise = advertise;
     }
-
+    @Column(name = "position", unique = true, nullable = false)
     public String getPosition() {
         return position;
     }
@@ -43,6 +52,7 @@ public class AdvEntity {
         this.position = position;
     }
 
+    @Column(name = "is_active", unique = true, nullable = false)
     public Integer getIsActive() {
         return isActive;
     }
@@ -50,7 +60,7 @@ public class AdvEntity {
     public void setIsActive(Integer isActive) {
         this.isActive = isActive;
     }
-
+    @Column(name = "created_user", unique = true, nullable = false)
     public String getCreatedUser() {
         return createdUser;
     }
@@ -58,7 +68,7 @@ public class AdvEntity {
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
     }
-
+    @Column(name = "created_time", unique = true, nullable = false)
     public String getCreatedTime() {
         return createdTime;
     }
@@ -66,7 +76,7 @@ public class AdvEntity {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
-
+    @Column(name = "modified_user", unique = true, nullable = false)
     public String getModifiedUser() {
         return modifiedUser;
     }
@@ -74,7 +84,7 @@ public class AdvEntity {
     public void setModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
     }
-
+    @Column(name = "modified_time", unique = true, nullable = false)
     public String getModifiedTime() {
         return modifiedTime;
     }

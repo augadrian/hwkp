@@ -26,8 +26,8 @@ public class AdvServiceImpl implements AdvService {
            advDao.save(advEntity);
     }
     @Override
-    public void update(AdvEntity advEntity) {
-          advDao.update(advEntity);
+    public AdvEntity update(AdvEntity advEntity) {
+         return advDao.update(advEntity);
     }
 
     @Override
@@ -36,8 +36,8 @@ public class AdvServiceImpl implements AdvService {
     }
 
     @Override
-    public AdvEntity findById(AdvEntity advEntity) {
-        return null;
+    public AdvEntity findById(Integer id) {
+        return advDao.findById(id);
     }
 
     @Override

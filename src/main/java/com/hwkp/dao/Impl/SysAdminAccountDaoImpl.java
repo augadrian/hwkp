@@ -18,37 +18,39 @@ public class SysAdminAccountDaoImpl  extends BaseDaoImpl<SysAdminAccountEntity> 
     }
 
     @Override
-    public void update(SysAdminAccountEntity sysAdminAccountEntity) {
-        StringBuffer hq=new StringBuffer("update sys_admin_account s set no=no");
+    public SysAdminAccountEntity update(SysAdminAccountEntity sysAdminAccountEntity) {
+        StringBuffer hq=new StringBuffer("update SysAdminAccountEntity s set no = no");
         if(sysAdminAccountEntity.getUserId()!=null){
-            hq.append(",s.user_id="+sysAdminAccountEntity.getUserId());
+            hq.append(",s.userId= '"+sysAdminAccountEntity.getUserId()+ "'");
         }if(sysAdminAccountEntity.getWxOpenid()!=null){
-            hq.append(",s.wx_openid="+sysAdminAccountEntity.getWxOpenid());
+            hq.append(",s.wxOpenid= '"+sysAdminAccountEntity.getWxOpenid()+ "'");
         }if(sysAdminAccountEntity.getAccount()!=null){
-            hq.append(",s.account="+sysAdminAccountEntity.getAccount());
+            hq.append(",s.account= '"+sysAdminAccountEntity.getAccount()+ "'");
         }if(sysAdminAccountEntity.getPassword()!=null){
-            hq.append(",s.password="+sysAdminAccountEntity.getPassword());
+            hq.append(",s.password= '"+sysAdminAccountEntity.getPassword()+ "'");
         }if(sysAdminAccountEntity.getHeadUrl()!=null){
-            hq.append(",s.head_url="+sysAdminAccountEntity.getHeadUrl());
+            hq.append(",s.headUrl= '"+sysAdminAccountEntity.getHeadUrl()+ "'");
         }if(sysAdminAccountEntity.getUserName()!=null){
-            hq.append(",s.user_name="+sysAdminAccountEntity.getUserName());
+            hq.append(",s.userName= '"+sysAdminAccountEntity.getUserName()+ "'");
         }if(sysAdminAccountEntity.getPermission()!=null){
-            hq.append(",s.permission="+sysAdminAccountEntity.getPermission());
+            hq.append(",s.permission= '"+sysAdminAccountEntity.getPermission()+ "'");
         }if(sysAdminAccountEntity.getLastLoginTime()!=null){
-            hq.append(",s.last_login_time="+sysAdminAccountEntity.getLastLoginTime());
+            hq.append(",s.lastLoginTime= '"+sysAdminAccountEntity.getLastLoginTime()+ "'");
         }if(sysAdminAccountEntity.getIsBanded()!=null){
-            hq.append(",s.is_banded="+sysAdminAccountEntity.getIsBanded());
+            hq.append(",s.isBanded= '"+sysAdminAccountEntity.getIsBanded()+ "'");
         }if(sysAdminAccountEntity.getIsActive()!=null){
-            hq.append(",s.is_active="+sysAdminAccountEntity.getIsActive());
+            hq.append(",s.isActive= '"+sysAdminAccountEntity.getIsActive()+ "'");
         }if(sysAdminAccountEntity.getCreatedUser()!=null){
-            hq.append(",s.created_user="+sysAdminAccountEntity.getCreatedUser());
+            hq.append(",s.createdUser= '"+sysAdminAccountEntity.getCreatedUser()+ "'");
         }if(sysAdminAccountEntity.getCreatedTime()!=null){
-            hq.append(",s.created_time="+sysAdminAccountEntity.getCreatedTime());
+            hq.append(",s.createdTime= '"+sysAdminAccountEntity.getCreatedTime()+ "'");
         }if(sysAdminAccountEntity.getModifiedUser()!=null){
-            hq.append(",s.modified_user="+sysAdminAccountEntity.getModifiedUser());
+            hq.append(",s.modifiedUser= '"+sysAdminAccountEntity.getModifiedUser()+ "'");
         }if(sysAdminAccountEntity.getModifiedTime()!=null){
-            hq.append(",s.modified_time="+sysAdminAccountEntity.getModifiedTime());
+            hq.append(",s.modifiedTime= '"+sysAdminAccountEntity.getModifiedTime()+ "'");
         }
+     String  hql=hq + " where s.no =" + sysAdminAccountEntity.getNo() + "";
+        return  this.sessionFactory.getCurrentSession().createQuery(hql).executeUpdate()> 0?this.findById(sysAdminAccountEntity.getNo()):null;
     }
 
     @Override

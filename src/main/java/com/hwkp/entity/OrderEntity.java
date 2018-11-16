@@ -1,5 +1,9 @@
 package com.hwkp.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="b_order")
 public class OrderEntity {
     private Integer id;
     private String orderId;//
@@ -27,6 +31,9 @@ public class OrderEntity {
     private String modifiedUser;//
     private String modifiedTime;//
 
+    @Id
+    @Column(name = "id", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer getId() {
         return id;
     }
@@ -34,7 +41,7 @@ public class OrderEntity {
     public void setId(Integer id) {
         this.id = id;
     }
-
+    @Column(name = "order_id", unique = true, nullable = false)
     public String getOrderId() {
         return orderId;
     }
@@ -42,7 +49,7 @@ public class OrderEntity {
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
-
+    @Column(name = "transaction_id", unique = true, nullable = false)
     public String getTransactionId() {
         return transactionId;
     }
@@ -50,7 +57,7 @@ public class OrderEntity {
     public void setTransactionId(String transactionId) {
         this.transactionId = transactionId;
     }
-
+    @Column(name = "round_id", unique = true, nullable = false)
     public String getRoundId() {
         return roundId;
     }
@@ -58,7 +65,7 @@ public class OrderEntity {
     public void setRoundId(String roundId) {
         this.roundId = roundId;
     }
-
+    @Column(name = "product_id", unique = true, nullable = false)
     public String getProductId() {
         return productId;
     }
@@ -66,7 +73,7 @@ public class OrderEntity {
     public void setProductId(String productId) {
         this.productId = productId;
     }
-
+    @Column(name = "zip_code", unique = true, nullable = false)
     public String getZipCode() {
         return zipCode;
     }
@@ -74,7 +81,7 @@ public class OrderEntity {
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
-
+    @Column(name = "province_name", unique = true, nullable = false)
     public String getProvinceName() {
         return provinceName;
     }
@@ -82,7 +89,7 @@ public class OrderEntity {
     public void setProvinceName(String provinceName) {
         this.provinceName = provinceName;
     }
-
+    @Column(name = "city_name", unique = true, nullable = false)
     public String getCityName() {
         return cityName;
     }
@@ -90,7 +97,7 @@ public class OrderEntity {
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
-
+    @Column(name = "county_name", unique = true, nullable = false)
     public String getCountyName() {
         return countyName;
     }
@@ -98,7 +105,7 @@ public class OrderEntity {
     public void setCountyName(String countyName) {
         this.countyName = countyName;
     }
-
+    @Column(name = "detail_info", unique = true, nullable = false)
     public String getDetailInfo() {
         return detailInfo;
     }
@@ -106,7 +113,7 @@ public class OrderEntity {
     public void setDetailInfo(String detailInfo) {
         this.detailInfo = detailInfo;
     }
-
+    @Column(name = "tel_number", unique = true, nullable = false)
     public String getTelNumber() {
         return telNumber;
     }
@@ -114,7 +121,7 @@ public class OrderEntity {
     public void setTelNumber(String telNumber) {
         this.telNumber = telNumber;
     }
-
+    @Column(name = "user_name", unique = true, nullable = false)
     public String getUserName() {
         return userName;
     }
@@ -122,7 +129,7 @@ public class OrderEntity {
     public void setUserName(String userName) {
         this.userName = userName;
     }
-
+    @Column(name = "wx_openid", unique = true, nullable = false)
     public String getWxOpenid() {
         return wxOpenid;
     }
@@ -130,7 +137,7 @@ public class OrderEntity {
     public void setWxOpenid(String wxOpenid) {
         this.wxOpenid = wxOpenid;
     }
-
+    @Column(name = "nonce_str", unique = true, nullable = false)
     public String getNonceStr() {
         return nonceStr;
     }
@@ -138,7 +145,7 @@ public class OrderEntity {
     public void setNonceStr(String nonceStr) {
         this.nonceStr = nonceStr;
     }
-
+    @Column(name = "is_paid", unique = true, nullable = false)
     public Integer getIsPaid() {
         return isPaid;
     }
@@ -146,7 +153,7 @@ public class OrderEntity {
     public void setIsPaid(Integer isPaid) {
         this.isPaid = isPaid;
     }
-
+    @Column(name = "paid_time", unique = true, nullable = false)
     public String getPaidTime() {
         return paidTime;
     }
@@ -154,7 +161,7 @@ public class OrderEntity {
     public void setPaidTime(String paidTime) {
         this.paidTime = paidTime;
     }
-
+    @Column(name = "pay_result", unique = true, nullable = true)
     public String getPayResult() {
         return payResult;
     }
@@ -162,7 +169,7 @@ public class OrderEntity {
     public void setPayResult(String payResult) {
         this.payResult = payResult;
     }
-
+    @Column(name = "express_num", unique = true, nullable = false)
     public String getExpressNum() {
         return expressNum;
     }
@@ -170,7 +177,7 @@ public class OrderEntity {
     public void setExpressNum(String expressNum) {
         this.expressNum = expressNum;
     }
-
+    @Column(name = "is_send", unique = true, nullable = false)
     public Integer getIsSend() {
         return isSend;
     }
@@ -178,7 +185,7 @@ public class OrderEntity {
     public void setIsSend(Integer isSend) {
         this.isSend = isSend;
     }
-
+    @Column(name = "send_time", unique = true, nullable = false)
     public String getSendTime() {
         return sendTime;
     }
@@ -186,7 +193,7 @@ public class OrderEntity {
     public void setSendTime(String sendTime) {
         this.sendTime = sendTime;
     }
-
+    @Column(name = "is_active", unique = true, nullable = false)
     public Integer getIsActive() {
         return isActive;
     }
@@ -194,7 +201,7 @@ public class OrderEntity {
     public void setIsActive(Integer isActive) {
         this.isActive = isActive;
     }
-
+    @Column(name = "created_user", unique = true, nullable = false)
     public String getCreatedUser() {
         return createdUser;
     }
@@ -202,7 +209,7 @@ public class OrderEntity {
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
     }
-
+    @Column(name = "created_time", unique = true, nullable = false)
     public String getCreatedTime() {
         return createdTime;
     }
@@ -210,7 +217,7 @@ public class OrderEntity {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
-
+    @Column(name = "modified_user", unique = true, nullable = false)
     public String getModifiedUser() {
         return modifiedUser;
     }
@@ -218,7 +225,7 @@ public class OrderEntity {
     public void setModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
     }
-
+    @Column(name = "modified_time", unique = true, nullable = false)
     public String getModifiedTime() {
         return modifiedTime;
     }

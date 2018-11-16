@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>好物快拍</title>
+    <link rel="stylesheet" href="statics/css/global.css">
+    <link rel="stylesheet" href="statics/css/angular-material.css">
+    <link rel="stylesheet" href="statics/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="statics/css/material-icons.css">
+    <script src="statics/js/lib/jquery/jquery.min.js"></script>
+    <script src="statics/js/lib/jquery/jquery.mousewheel.js"></script>
+    <script src="statics/js/lib/jquery/jquery.PrintArea.js"></script>
+    <script src="statics/js/lib/angular/angular.min.js"></script>
+    <script src="statics/js/lib/angular/angular-material.min.js"></script>
+    <script src="statics/js/lib/angular-ui/angular-ui-router.min.js"></script>
+    <script src="statics/js/lib/angular/angular-animate.min.js"></script>
+    <script src="statics/js/lib/angular/angular-messages.min.js"></script>
+    <script src="statics/js/lib/angular/angular-aria.min.js"></script>
+    <script src="statics/js/lib/angular/angular-perfect-scrollbar.js"></script>
+    <script src="statics/js/lib/angular/angular-use-form-error.js"></script>
+    <script src="statics/js/lib/moment-with-locales.js"></script>
+    <script src="statics/js/lib/ocLazyLoad.js"></script>
+    <script src="statics/js/lib/highcharts.src.js"></script>
+    <script src="statics/js/lib/angular/highcharts-ng.min.js"></script>
+    <script src="statics/js/lib/ng-file-upload-all.min.js"></script>
+    <script src="statics/js/app.js"></script>
+    <script src="statics/js/router.js"></script>
+    <script src="statics/js/directive.js"></script>
+
+    <script src="statics/js/lib/angular/cookies.js"></script>
+    <script src="statics/js/lib/angular/cookieWriter.js"></script>
+    <script src="statics/js/lib/angular/cookieStore.js"></script>
+    <script src="statics/js/lib/jquery/base64.js"></script>
+</head>
+<body class="layout-column">
+<div ng-include="'template/page-loading.html'"></div>
+<div class="layout-row flex" ui-view="main">
+    <div ui-view="login" class="layout-column flex"></div>
+</div>
+</body>
+</html>

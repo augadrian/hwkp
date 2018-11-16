@@ -8,8 +8,8 @@ import java.util.Map;
 public interface AdvService    {
 
     void save(AdvEntity advEntity);
-    void update(AdvEntity advEntity);
+    AdvEntity update(AdvEntity advEntity);
     void delete(AdvEntity advEntity);
-    AdvEntity findById(AdvEntity advEntity);
+    AdvEntity findById(Integer id);
     List<AdvEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
 }

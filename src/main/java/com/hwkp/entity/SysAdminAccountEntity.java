@@ -1,5 +1,9 @@
 package com.hwkp.entity;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="sys_admin_account")
 public class SysAdminAccountEntity {
     private Integer no;
     private String userId;//
@@ -8,7 +12,7 @@ public class SysAdminAccountEntity {
     private String password;//
     private String headUrl;//
     private String userName;//
-    private  String permission;
+    private String permission;
     private String lastLoginTime;//
     private Integer isBanded;//
     private Integer isActive;//
@@ -16,7 +20,9 @@ public class SysAdminAccountEntity {
     private String createdTime;//
     private String modifiedUser;//
     private String modifiedTime;//
-
+    @Id
+    @Column(name = "no", unique = true, nullable = false)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer getNo() {
         return no;
     }
@@ -24,7 +30,7 @@ public class SysAdminAccountEntity {
     public void setNo(Integer no) {
         this.no = no;
     }
-
+    @Column(name = "user_id", unique = true, nullable = false)
     public String getUserId() {
         return userId;
     }
@@ -33,6 +39,8 @@ public class SysAdminAccountEntity {
         this.userId = userId;
     }
 
+    @Column(name = "wx_openid", unique = true, nullable = false)
+
     public String getWxOpenid() {
         return wxOpenid;
     }
@@ -40,6 +48,7 @@ public class SysAdminAccountEntity {
     public void setWxOpenid(String wxOpenid) {
         this.wxOpenid = wxOpenid;
     }
+    @Column(name = "account", unique = true, nullable = false)
 
     public String getAccount() {
         return account;
@@ -48,6 +57,7 @@ public class SysAdminAccountEntity {
     public void setAccount(String account) {
         this.account = account;
     }
+    @Column(name = "password", unique = true, nullable = false)
 
     public String getPassword() {
         return password;
@@ -56,6 +66,7 @@ public class SysAdminAccountEntity {
     public void setPassword(String password) {
         this.password = password;
     }
+    @Column(name = "head_url", unique = true, nullable = false)
 
     public String getHeadUrl() {
         return headUrl;
@@ -64,6 +75,7 @@ public class SysAdminAccountEntity {
     public void setHeadUrl(String headUrl) {
         this.headUrl = headUrl;
     }
+    @Column(name = "user_name", unique = true, nullable = false)
 
     public String getUserName() {
         return userName;
@@ -72,6 +84,7 @@ public class SysAdminAccountEntity {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+    @Column(name = "last_login_time", unique = true, nullable = false)
 
     public String getLastLoginTime() {
         return lastLoginTime;
@@ -80,6 +93,7 @@ public class SysAdminAccountEntity {
     public void setLastLoginTime(String lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
     }
+    @Column(name = "is_banded", unique = true, nullable = false)
 
     public Integer getIsBanded() {
         return isBanded;
@@ -88,6 +102,7 @@ public class SysAdminAccountEntity {
     public void setIsBanded(Integer isBanded) {
         this.isBanded = isBanded;
     }
+    @Column(name = "is_active", unique = true, nullable = false)
 
     public Integer getIsActive() {
         return isActive;
@@ -96,6 +111,7 @@ public class SysAdminAccountEntity {
     public void setIsActive(Integer isActive) {
         this.isActive = isActive;
     }
+    @Column(name = "created_user", unique = true, nullable = false)
 
     public String getCreatedUser() {
         return createdUser;
@@ -104,6 +120,7 @@ public class SysAdminAccountEntity {
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
     }
+    @Column(name = "created_time", unique = true, nullable = false)
 
     public String getCreatedTime() {
         return createdTime;
@@ -112,6 +129,7 @@ public class SysAdminAccountEntity {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
+    @Column(name = "modified_user", unique = true, nullable = false)
 
     public String getModifiedUser() {
         return modifiedUser;
@@ -120,6 +138,7 @@ public class SysAdminAccountEntity {
     public void setModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
     }
+    @Column(name = "modified_time", unique = true, nullable = false)
 
     public String getModifiedTime() {
         return modifiedTime;
@@ -128,6 +147,7 @@ public class SysAdminAccountEntity {
     public void setModifiedTime(String modifiedTime) {
         this.modifiedTime = modifiedTime;
     }
+    @Column(name = "permission", unique = true, nullable = false)
 
     public String getPermission() {
         return permission;

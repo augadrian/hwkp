@@ -1,0 +1,44 @@
+<div class="login-wrapper">
+    <div class="login-container layout-row md-whiteframe-10dp">
+        <div class="flex-40 login-left">
+            <img src="../../statics/images/login_left_person.png">
+        </div>
+        <div class="flex-60 login-right">
+            <span class="logo"></span>
+            <form name="loginForm">
+                <div class="login-form">
+
+                    <md-input-container class="md-block">
+                        <label>用户名</label>
+                        <input type="text"
+                               ng-model="login.userName"
+                               name="userName"
+                               required
+                               minlength="1"
+                               maxlength="10">
+                        <div ng-messages="loginForm.userName.$error">
+                            <div ng-message="required,minlength,maxlength">请输入有效的用户名</div>
+                        </div>
+                        </md-input-container>
+                    <md-input-container class="md-block" >
+                        <label>登陆密码</label>
+                        <input type="password"
+                               ng-model="login.passWord"
+                               name="passWord"
+                               required
+                               minlength="1"
+                               maxlength="10" id="adminPass">
+                        <div ng-messages="loginForm.$error">
+                            <div ng-message="required,minlength,maxlength">请输入登陆密码</div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <md-button class="md-raised md-primary"
+                                   ng-disabled="loginForm.$invalid"
+                                   ng-click="validLogin(login,$event)" id="btnLogin" onkeydown="check(login,$event)">登陆</md-button>
+                    </md-input-container>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

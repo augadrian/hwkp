@@ -19,7 +19,7 @@ public class OrderDaoImpl extends BaseDaoImpl<OrderEntity> implements OrderDao {
     }
 
     @Override
-    public void update(OrderEntity orderEntity) {
+    public OrderEntity update(OrderEntity orderEntity) {
         StringBuffer hq=new StringBuffer("update b_order b set id=id");
         if(orderEntity.getOrderId()!=null){
             hq.append(",b.order_id="+orderEntity.getOrderId());
@@ -60,7 +60,9 @@ public class OrderDaoImpl extends BaseDaoImpl<OrderEntity> implements OrderDao {
         }if(orderEntity.getOrderId()!=null){
             hq.append(",b.is_active="+orderEntity.getOrderId());
         }
+        String hql = hq + " where a.id =" + orderEntity.getId() + "";
 
+        return this.sessionFactory.getCurrentSession().createQuery(hql).executeUpdate()> 0?this.findById(orderEntity.getId()):null;
     }
 
     @Override
@@ -71,7 +73,7 @@ public class OrderDaoImpl extends BaseDaoImpl<OrderEntity> implements OrderDao {
 
     @Override
     public OrderEntity findById(Integer id) {
-        return null;
+        return (OrderEntity) super.findById(OrderEntity.class,id);
     }
 
     @Override

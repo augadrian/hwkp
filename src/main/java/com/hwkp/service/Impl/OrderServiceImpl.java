@@ -26,8 +26,8 @@ public class OrderServiceImpl implements OrderService  {
     }
 
     @Override
-    public void update(OrderEntity orderEntity) {
-        orderDao.update(orderEntity);
+    public OrderEntity update(OrderEntity orderEntity) {
+       return orderDao.update(orderEntity);
     }
 
     @Override
@@ -36,8 +36,8 @@ public class OrderServiceImpl implements OrderService  {
     }
 
     @Override
-    public OrderEntity findById(OrderEntity orderEntity) {
-        return null;
+    public OrderEntity findById(Integer id) {
+        return orderDao.findById(id);
     }
 
     @Override

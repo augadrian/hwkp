@@ -2,8 +2,8 @@ package com.hwkp.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hwkp.common.JsonResult;
-import com.hwkp.entity.ProductEntity;
-import com.hwkp.service.ProductService;
+import com.hwkp.entity.SysAdminAccountEntity;
+import com.hwkp.service.SysAdminAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,23 +14,23 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping(value = "Product",produces = "text/html;charset=UTF-8")
-public class productController {
+public class AysAdminAccountController {
 
   @Autowired
-    private ProductService productService;
+    private SysAdminAccountService sysAdminAccountService;
 
   ObjectMapper mapToJson = new ObjectMapper();
   JsonResult jsonResult = new JsonResult();
 
     @ResponseBody
-    @RequestMapping(value="/addProduct", method = RequestMethod.POST)
-    public String addProduct(String productObj)throws IOException {
-      ProductEntity productEntity=mapToJson.readValue(productObj,ProductEntity.class);
-      if(productEntity.getCover()!=null){
-        productService.save(productEntity);
+    @RequestMapping(value="/addSysAdminAccount", method = RequestMethod.POST)
+    public String addSysAdminAccount(String sysAdminAccountObj)throws IOException {
+      SysAdminAccountEntity sysAdminAccountEntity=mapToJson.readValue(sysAdminAccountObj,SysAdminAccountEntity.class);
+      if(sysAdminAccountEntity.getUserId()!=null){
+        sysAdminAccountService.save(sysAdminAccountEntity);
         jsonResult.setStatus(200);
         jsonResult.setMessage("添加成功");
-        jsonResult.setData(productEntity);
+        jsonResult.setData(sysAdminAccountEntity);
       }else {
         jsonResult.setStatus(500);
         jsonResult.setMessage("添加失败");
@@ -39,11 +39,11 @@ public class productController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/delProduct",method = RequestMethod.DELETE)
-    public String delProduct(Integer id)throws IOException{
-      ProductEntity productEntity=productService.findById(id);
-      if(productEntity!=null){
-        productService.delete(productEntity);
+    @RequestMapping(value = "/delSysAdminAccount",method = RequestMethod.DELETE)
+    public String delSysAdminAccount(Integer id)throws IOException{
+      SysAdminAccountEntity sysAdminAccountEntity=sysAdminAccountService.findById(id);
+      if(sysAdminAccountEntity!=null){
+        sysAdminAccountService.delete(sysAdminAccountEntity);
         jsonResult.setStatus(200);
         jsonResult.setMessage("删除成功");
       }else{
@@ -54,14 +54,14 @@ public class productController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/updateProduct",method = RequestMethod.POST)
-    public String updateProduct(String productObj)throws IOException{
-      ProductEntity productEntity=mapToJson.readValue(productObj,ProductEntity.class);
+    @RequestMapping(value = "/updateSysAdminAccount",method = RequestMethod.POST)
+    public String updateSysAdminAccount(String sysAdminAccountObj)throws IOException{
+      SysAdminAccountEntity sysAdminAccountEntity=mapToJson.readValue(sysAdminAccountObj,SysAdminAccountEntity.class);
 
-        if (this.productService.update(productEntity) != null) {
+        if (this.sysAdminAccountService.update(sysAdminAccountEntity) != null) {
           jsonResult.setStatus(200);
           jsonResult.setMessage("修改成功");
-          jsonResult.setData(productEntity);
+          jsonResult.setData(sysAdminAccountEntity);
 
         } else {
           jsonResult.setStatus(500);

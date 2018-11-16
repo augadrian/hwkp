@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.io.Serializable;
 @Repository
 public class BaseDaoImpl<T> implements BaseDao<T> {

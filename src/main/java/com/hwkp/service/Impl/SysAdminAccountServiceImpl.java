@@ -26,8 +26,8 @@ public class SysAdminAccountServiceImpl implements SysAdminAccountService {
     }
 
     @Override
-    public void update(SysAdminAccountEntity sysAdminAccountEntity) {
-        sysAdminAccountDao.update(sysAdminAccountEntity);
+    public SysAdminAccountEntity update(SysAdminAccountEntity sysAdminAccountEntity) {
+       return sysAdminAccountDao.update(sysAdminAccountEntity);
     }
 
     @Override
@@ -36,8 +36,8 @@ public class SysAdminAccountServiceImpl implements SysAdminAccountService {
     }
 
     @Override
-    public SysAdminAccountEntity findById(SysAdminAccountEntity sysAdminAccountEntity) {
-        return null;
+    public SysAdminAccountEntity findById(Integer no) {
+        return sysAdminAccountDao.findById(no);
     }
 
     @Override

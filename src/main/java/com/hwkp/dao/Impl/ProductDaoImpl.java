@@ -19,33 +19,33 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
 
     @Override
     public ProductEntity update(ProductEntity productEntity) {
-        StringBuffer hq=new StringBuffer("update b_product b set no=no" );
+        StringBuffer hq=new StringBuffer("update ProductEntity b set no = no" );
         if(productEntity.getProductId()!=null){
-            hq.append(",b.product_id="+productEntity.getProductId());
+            hq.append(",b.productId= '"+productEntity.getProductId() + "'");
         } if(productEntity.getCover()!=null){
-            hq.append(",b.cover="+productEntity.getCover());
+            hq.append(",b.cover= '"+productEntity.getCover() + "'");
         } if(productEntity.getProName()!=null){
-            hq.append(",b.pro_name="+productEntity.getProName());
+            hq.append(",b.proName= '"+productEntity.getProName() + "'");
         } if(productEntity.getProAbstract()!=null){
-            hq.append(",b.pro_abstract="+productEntity.getProAbstract());
+            hq.append(",b.proAbstract= '"+productEntity.getProAbstract() + "'");
         } if(productEntity.getProIntroduction()!=null){
-            hq.append(",b.pro_introduction="+productEntity.getProIntroduction());
-        } if(productEntity.getProOriginal_price()!=0){
-            hq.append(",b.pro_original_price="+productEntity.getProOriginal_price());
-        } if(productEntity.getExpressFee()!=0){
-            hq.append(",b.express_fee="+productEntity.getExpressFee());
+            hq.append(",b.proIntroduction= '"+productEntity.getProIntroduction() + "'");
+        } if(productEntity.getProOriginalPrice()!=null){
+            hq.append(",b.proOriginalPrice= '"+productEntity.getProOriginalPrice() + "'");
+        } if(productEntity.getExpressFee()!=null){
+            hq.append(",b.expressFee= '"+productEntity.getExpressFee() + "'");
         } if(productEntity.getIsActive()!=null){
-            hq.append(",b.is_active="+productEntity.getIsActive());
+            hq.append(",b.isActive= '"+productEntity.getIsActive() + "'");
         } if(productEntity.getCreatedUser()!=null){
-            hq.append(",b.created_user="+productEntity.getCreatedUser());
+            hq.append(",b.createdUser= '"+productEntity.getCreatedUser() + "'");
         } if(productEntity.getCreatedTime()!=null){
-            hq.append(",b.created_time="+productEntity.getCreatedTime());
+            hq.append(",b.createdTime= '"+productEntity.getCreatedTime() + "'");
         } if(productEntity.getModifiedUser()!=null){
-            hq.append(",b.modified_user="+productEntity.getModifiedUser());
+            hq.append(",b.modifiedUser= '"+productEntity.getModifiedUser() + "'");
         } if(productEntity.getModifiedTime()!=null){
-            hq.append(",b.modified_time="+productEntity.getModifiedTime());
+            hq.append(",b.modifiedTime= '"+productEntity.getModifiedTime() + "'");
         }
-        String hql = hq + " where a.no =" + productEntity.getNo() + "";
+        String hql = hq + " where b.no =" + productEntity.getNo() + "";
 
         return this.sessionFactory.getCurrentSession().createQuery(hql).executeUpdate() > 0?this.findById(productEntity.getNo()):null;
     }
