@@ -17,11 +17,7 @@ app.run(['$rootScope', '$log', '$timeout', function ($rootScope, $log, $timeout)
     $rootScope.$on('$routeChangeSuccess', function () {
         $rootScope.loading=false;
     });
-    //即将到期会员、到期会员跳转会员编辑回调原页面的函数
-    $rootScope.$on('$stateChangeSuccess',function(event, toState, toParams, fromState, fromParams){
-        $rootScope.previousState=fromState.name;
-        $rootScope.fromParams=fromParams
-    })
+
 }]);
 app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$httpProvider','$locationProvider',
     function ($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpProvider,$locationProvider) {
@@ -29,9 +25,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
             debug: false,
             events: false
         });
-
-        //$httpProvider.interceptors.push('globalLoading');
-      $httpProvider.interceptors.push('adminIntercepter');
 
         ///路由配置
         // $locationProvider.html5Mode(true);
@@ -43,12 +36,12 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                 views: {
                     'login': {
                         controller: 'loginCtrl',
-                        templateUrl: 'views/auth/login.html'
+                        templateUrl: 'views/login.html'
                     }
                 },
                 resolve: {
                     loginCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load(['controller/auth.js','service/auth.js','service/store.js']);
+                        return $ocLazyLoad.load(['controller/auth.js','service/auth.js']);
                     }]
                 }
             })
@@ -63,7 +56,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$ocLazyLoadProvider', '$htt
                 },
                 resolve: {
                     mainCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
-                        return $ocLazyLoad.load(['controller/main.js', 'service/auth.js','service/global-search.js','service/member.js','service/sales.js','service/locker.js','service/employee.js']);
+                        return $ocLazyLoad.load(['controller/main.js', 'service/auth.js']);
                     }]
                 }
             })

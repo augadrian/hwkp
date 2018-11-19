@@ -11,9 +11,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
-@RequestMapping(value = "Product",produces = "text/html;charset=UTF-8")
+@RequestMapping(value = "adminAccount",produces = "text/html;charset=UTF-8")
 public class AysAdminAccountController {
 
   @Autowired
@@ -21,6 +23,26 @@ public class AysAdminAccountController {
 
   ObjectMapper mapToJson = new ObjectMapper();
   JsonResult jsonResult = new JsonResult();
+
+
+  @ResponseBody
+  @RequestMapping(value="/verifySysAdminAccount", method = RequestMethod.POST)
+  public  String login(String stringObj) throws  IOException{
+   SysAdminAccountEntity sysAdminAccountEntity=mapToJson.readValue(stringObj,SysAdminAccountEntity.class);
+   SysAdminAccountEntity sysAdminAccountEntity1=sysAdminAccountService.verifyAdmin(sysAdminAccountEntity);
+     if(sysAdminAccountEntity1!=null){
+       jsonResult.setData(sysAdminAccountEntity1);
+       jsonResult.setMessage("登陆成功");
+       jsonResult.setStatus(200);
+
+     }
+     else{
+       jsonResult.setMessage("登陆失败");
+       jsonResult.setStatus(500);
+
+     }
+    return mapToJson.writeValueAsString(jsonResult);
+  }
 
     @ResponseBody
     @RequestMapping(value="/addSysAdminAccount", method = RequestMethod.POST)
@@ -34,6 +56,7 @@ public class AysAdminAccountController {
       }else {
         jsonResult.setStatus(500);
         jsonResult.setMessage("添加失败");
+
       }
       return mapToJson.writeValueAsString(jsonResult);
     }

@@ -44,4 +44,10 @@ public class SysAdminAccountServiceImpl implements SysAdminAccountService {
     public List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
         return null;
     }
+
+    @Override
+    public SysAdminAccountEntity verifyAdmin(SysAdminAccountEntity sysAdminAccountEntity) {
+
+        return sysAdminAccountDao.verifyAdmin(sysAdminAccountEntity);
+    }
 }

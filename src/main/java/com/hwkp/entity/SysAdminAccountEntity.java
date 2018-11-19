@@ -12,7 +12,7 @@ public class SysAdminAccountEntity {
     private String password;//
     private String headUrl;//
     private String userName;//
-    private String permission;
+    private Integer permission;
     private String lastLoginTime;//
     private Integer isBanded;//
     private Integer isActive;//
@@ -149,11 +149,11 @@ public class SysAdminAccountEntity {
     }
     @Column(name = "permission", unique = true, nullable = false)
 
-    public String getPermission() {
+    public Integer getPermission() {
         return permission;
     }
 
-    public void setPermission(String permission) {
+    public void setPermission(Integer permission) {
         this.permission = permission;
     }
 }

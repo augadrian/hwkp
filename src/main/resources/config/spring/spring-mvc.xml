@@ -54,11 +54,10 @@
     <!--</bean>-->
 
     <!-- 静态资源(js/*)的访问 -->
-    <!--<mvc:resources mapping="/js/**" location="/statics/js/"/>-->
-    <!--<mvc:resources mapping="/css/**" location="/statics/css/"/>-->
-    <!--<mvc:resources mapping="/images/**" location="/statics/images/"/>-->
-    <!--<mvc:resources location="/" mapping="/**/*.html"/>-->
-    <!--<mvc:interceptors>-->
-    <!--<bean class=""></bean>-->
-    <!--</mvc:interceptors>-->
+    <mvc:resources mapping="/js/**" location="/statics/js/*"/>
+    <mvc:resources mapping="/css/**" location="/statics/css/"/>
+    <mvc:resources mapping="/images/**" location="/statics/images/"/>
+    <mvc:interceptors>
+        <bean class="com.hwkp.interceptor.SessionInterceptor"></bean>
+    </mvc:interceptors>
 </beans>

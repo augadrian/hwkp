@@ -51,22 +51,6 @@ app.config(['$mdIconProvider', '$mdDateLocaleProvider',
     ;
     $mdIconProvider.fontSet('md', 'material-icons');
 }]);
-//app.factory('globalLoading', ["$rootScope",function ($rootScope) {
-//
-//    var loading = {
-//        request: function (config) {
-//            $rootScope.loading=true;
-//            return config;
-//        },
-//        response: function (response) {
-//
-//            $rootScope.loading=false;
-//            return response;
-//        }
-//    };
-//    return loading;
-//}]);
-
 
 
 app.factory('adminIntercepter', ["$rootScope", '$cookies','$location',function ($rootScope,$cookies,$location) {
@@ -76,7 +60,6 @@ app.factory('adminIntercepter', ["$rootScope", '$cookies','$location',function (
         $rootScope.expireTimeFactory=expireDate.getHours()+":"+expireDate.getMinutes()+":"+expireDate.getSeconds();
         if($cookies.getObject("login_admin")!=undefined) {
             $rootScope.isShow=true;
-            $rootScope.superManager=$cookies.getObject("login_admin").storeIds;
         } else $rootScope.isShow= false;
         $rootScope.buttonPermission=function (buttonName) {
             //return true;

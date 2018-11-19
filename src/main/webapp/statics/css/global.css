@@ -266,7 +266,6 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
       background: #fff; }
       .login-wrapper .login-container .login-right .logo {
         display: block;
-        background: url("../images/login_logo.png") no-repeat left;
         background-size: 50%; }
     .login-wrapper .login-container .login-form {
       margin-top: 50px; }
@@ -283,7 +282,6 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
   height: 64px;
   line-height: 64px;
   text-align: center;
-  background: #2baa3f url("../../statics/images/logo.png") no-repeat center;
   background-size: 101.33333px 32.33333px;
   color: #fff; }
 

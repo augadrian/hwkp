@@ -1,0 +1,142 @@
+
+    <md-sidenav class="flex-15 side-nav md-whiteframe-10dp" md-is-locked-open="isSideNavOpen" ng-hide="sideNavVisible" md-component-id="leftNav">
+        <md-toolbar class="md-whiteframe-5dp">
+            <a ui-sref="index.main" class="logo"></a>
+        </md-toolbar>
+        <perfect-scrollbar class="side-nav-list" wheel-propagation="false" wheel-speed="50">
+            <ul>
+                <li ng-repeat="mainItem in navList" ng-if="mainItem.navName.length>0">
+                    <div class="nav-item layout-row">
+                        <a class="title flex">
+                            {{mainItem.navName}}
+                        </a>
+                    </div>
+                    <ul class="sub-nav-list">
+                        <li class="item" ng-repeat="item in mainItem.subNavList" ng-if="item.subNavName.length>0">
+                            <a ui-sref="{{item.subNavUrl}}"
+                               ui-sref-active="active"
+                               class="item-button"
+                               md-ink-ripple >
+                                <i class="icon {{item.subNavIcon}}" ></i>
+                                <span>{{item.subNavName}}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </perfect-scrollbar>
+    </md-sidenav>
+    <div class="flex right-content layout-column" ng-if="isShow">
+        <div class="system-setting-container md-whiteframe-1dp" ng-class="systemSettingPanelShow">
+            <ul>
+                <li>
+                    <a class="md-button" md-ink-ripple ui-sref="index.store-list({pageNo:1,pageSize:10})" ng-if="pageShow('F7_S1')&&superManager==0">
+                        <i class="icon icon-store-list"></i>
+                        <p>会所列表</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a class="md-button" md-ink-ripple ui-sref="index.employee-list({pageNo:1,pageSize:10})" ng-if="pageShow('F7_S2')">
+                        <i class="icon icon-employee-list"></i>
+                        <p>人事档案</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a class="md-button" md-ink-ripple ui-sref="index.auth-setting-list({pageNo:1,pageSize:10})" ng-if="pageShow('F7_S3')&&superManager==0">
+                        <i class="icon icon-auth-setting-list"></i>
+                        <p>权限设置</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a class="md-button" md-ink-ripple ng-if="pageShow('F7_S4')" ui-sref="index.log-list({pageNo:1,pageSize:10})">
+                        <i class="icon icon-log-list"></i>
+                        <p>后台日志</p>
+                    </a>
+
+                </li>
+                <li>
+                    <a class="md-button" md-ink-ripple ng-if="pageShow('F7_S5')">
+                        <i class="icon icon-backup-data"></i>
+                        <p>数据备份</p>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+        <md-toolbar class="header-right-toolbar md-whiteframe-5dp">
+            <div class="right-toolbar-menu layout-row">
+
+                <globalsearch></globalsearch>
+                <div class="flex left-menu">
+                    <a ng-click="toggleSideNav()" class="md-button" md-ink-ripple>
+                        <md-tooltip>
+                            {{sideNavTooltip}}
+                        </md-tooltip>
+                        <md-icon md-font-set="md">menu</md-icon>
+                    </a>
+                    <a ng-click="globalSearch($event)" class="md-button" md-ink-ripple>
+                        <md-tooltip>
+                            全局搜索
+                        </md-tooltip>
+                        <md-icon md-font-set="md">search</md-icon>
+                    </a>
+                    <a ng-click="toggleSystemSettingPanel($event)" class="md-button" md-ink-ripple>
+                        <md-tooltip>
+                            系统配置
+                        </md-tooltip>
+                        <md-icon md-font-set="md">settings</md-icon>
+                    </a>
+                    <!--<md-input-container >-->
+                        <!--<label>会员卡号</label> <input ng-model="brushCard"  ng-change="memberDetail(brushCard,$event)" ng-click="brushCard=''">-->
+                    <!--</md-input-container>-->
+                </div>
+                <div class="layout-row">
+                    <md-menu-bar class="user-menu">
+                        <md-menu>
+                            <button class="md-button user-button" md-ink-ripple
+                                    ng-click="userMenuCtrl.openMenu($mdOpenMenu)">
+                                <div class="layout-row">
+                                    <i class="material-icons">people</i>
+                                    <span class="username hide show-gt-sm">
+                                    {{login_admin.adminName}}（{{login_admin.storeName}}）</span>
+                                    <span class="username hide show-gt-sm"
+                                          ng-if="isAgainLogin" ng-click="logout()">
+                                    重新登录</span>
+                                    <i class="material-icons">keyboard_arrow_down</i>
+                                </div>
+                            </button>
+                            <md-menu-content width="3">
+                                <md-menu-item>
+                                    <md-button ui-sref="index.auth-setting-list({pageNo:1,pageSize:10})" md-ink-ripple>
+                                        <md-icon md-svg-icon="account">face</md-icon>
+                                        账号管理
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-item>
+                                    <md-button md-ink-ripple ui-sref="index.password-setting">
+                                        <md-icon md-svg-icon="password"></md-icon>
+                                        密码设置
+                                    </md-button>
+                                </md-menu-item>
+                                <md-menu-divider></md-menu-divider>
+                                <md-menu-item>
+                                    <md-button md-ink-ripple ng-click="logout()">
+                                        <md-icon md-svg-icon="logout"></md-icon>
+                                        退出账户
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                    </md-menu-bar>
+                </div>
+            </div>
+        </md-toolbar>
+        <div perfect-scrollbar class="scroll-bar flex" wheel-propagation="true" id="scroll_bar">
+            <div ui-view="layoutContent">
+
+            </div>
+        </div>
+    </div>
