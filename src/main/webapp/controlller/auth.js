@@ -340,7 +340,7 @@ angular.module('app').controller('loginCtrl',
                 obj.innerHTML = '正在登陆...';
                 authSettingListService.adminLogin(login, 0).then(function (data) {
                     $scope.loginObj = login;
-                    if (data.msg === 'success') {
+                    if (data.message === 'success') {
                         $scope.isFailedLogin = true;
                         $cookies.remove("navList");
                         $cookies.remove("login_admin");

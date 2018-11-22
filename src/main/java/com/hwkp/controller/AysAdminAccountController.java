@@ -32,12 +32,12 @@ public class AysAdminAccountController {
    SysAdminAccountEntity sysAdminAccountEntity1=sysAdminAccountService.verifyAdmin(sysAdminAccountEntity);
      if(sysAdminAccountEntity1!=null){
        jsonResult.setData(sysAdminAccountEntity1);
-       jsonResult.setMessage("登陆成功");
+       jsonResult.setMessage("success");
        jsonResult.setStatus(200);
 
      }
      else{
-       jsonResult.setMessage("登陆失败");
+       jsonResult.setMessage("fail");
        jsonResult.setStatus(500);
 
      }
