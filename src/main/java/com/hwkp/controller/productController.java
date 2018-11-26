@@ -1,5 +1,6 @@
 package com.hwkp.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hwkp.common.JsonResult;
 import com.hwkp.entity.ProductEntity;
@@ -11,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping(value = "Product",produces = "text/html;charset=UTF-8")
@@ -70,5 +74,27 @@ public class productController {
 
       return this.mapToJson.writeValueAsString(jsonResult);
     }
+
+
+  @ResponseBody
+  @RequestMapping(value = "/productList",method = RequestMethod.GET)
+  public String productList(Integer pageNo, Integer pageSize)throws JsonProcessingException {
+    Map<String, Object> jsonResult = new HashMap<>();
+    try {
+      List<ProductEntity> productEntityList = productService.findAll(pageNo, pageSize);
+      Integer itemCount = productService.findAll(null, null).size();
+      jsonResult.put("status", 200);
+      jsonResult.put("pageNo", pageNo);
+      jsonResult.put("pageSize", pageSize);
+      jsonResult.put("itemCount", itemCount);
+      jsonResult.put("message", "success");
+      jsonResult.put("list", productEntityList);
+    }catch (Exception e){
+      e.printStackTrace();
+      jsonResult.put("status", 500);
+      jsonResult.put("message", "查询失败");
+    }
+    return this.mapToJson.writeValueAsString(jsonResult);
+  }
 
 }

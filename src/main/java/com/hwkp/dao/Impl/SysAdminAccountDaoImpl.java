@@ -69,8 +69,8 @@ public class SysAdminAccountDaoImpl  extends BaseDaoImpl<SysAdminAccountEntity> 
     }
 
     @Override
-    public SysAdminAccountEntity verifyAdmin(SysAdminAccountEntity sysAdminAccountEntity) {
-        List<SysAdminAccountEntity> list=this.sessionFactory.getCurrentSession().createQuery("select a from SysAdminAccountEntity a where a.account=? and a.password=? ").setParameter(0,sysAdminAccountEntity.getAccount()).setParameter(1,sysAdminAccountEntity.getPassword()).list();
+    public SysAdminAccountEntity verifyAdmin(String account,String  password) {
+        List<SysAdminAccountEntity> list=this.sessionFactory.getCurrentSession().createQuery("select a from SysAdminAccountEntity a where a.account=? and a.password=? ").setParameter(0,account).setParameter(1,password).list();
         return list!=null&&list.size()>0?list.get(0):null;
     }
 }

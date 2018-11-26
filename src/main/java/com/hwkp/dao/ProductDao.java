@@ -12,5 +12,5 @@ import java.util.Map;
 public interface ProductDao extends BaseDao<ProductEntity> {
 
     ProductEntity findById(Integer id);
-    List<ProductEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
+    List<ProductEntity> findAll(Integer pageNo, Integer pageSize);
 }

@@ -46,8 +46,8 @@ public class SysAdminAccountServiceImpl implements SysAdminAccountService {
     }
 
     @Override
-    public SysAdminAccountEntity verifyAdmin(SysAdminAccountEntity sysAdminAccountEntity) {
+    public SysAdminAccountEntity verifyAdmin(String account,String  password) {
 
-        return sysAdminAccountDao.verifyAdmin(sysAdminAccountEntity);
+        return sysAdminAccountDao.verifyAdmin(account,password);
     }
 }

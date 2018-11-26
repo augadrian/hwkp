@@ -14,5 +14,5 @@ public interface ProductService  {
     ProductEntity update(ProductEntity productEntity);
     void delete(ProductEntity productEntity);
     ProductEntity findById(Integer id);
-    List<ProductEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
+    List<ProductEntity> findAll(Integer pageNo, Integer pageSize);
 }

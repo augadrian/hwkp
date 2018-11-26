@@ -2,8 +2,10 @@ package com.hwkp.dao.Impl;
 
 import com.hwkp.dao.ProductDao;
 import com.hwkp.entity.ProductEntity;
+import org.hibernate.Criteria;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -61,7 +63,16 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
     }
 
     @Override
-    public List<ProductEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
-        return null;
+    public List<ProductEntity> findAll(Integer pageNo, Integer pageSize) {
+        String sql=new String("select p from ProductEntity p where 1=1");
+        List<ProductEntity> productEntityList=new ArrayList<ProductEntity>();
+        if(pageNo!=null) {
+             productEntityList =this.sessionFactory.getCurrentSession().createQuery(sql).setFirstResult((pageNo - 1) * pageSize)
+                    .setMaxResults(pageSize).list();;
+
+        }else {
+            productEntityList = this.sessionFactory.getCurrentSession().createQuery(sql).list();
+        }
+        return productEntityList!=null&&productEntityList.size()>0?productEntityList:null;
     }
 }

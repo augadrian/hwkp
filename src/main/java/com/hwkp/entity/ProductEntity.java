@@ -100,7 +100,7 @@ public class ProductEntity {
     public void setIsActive(Integer isActive) {
         this.isActive = isActive;
     }
-
+    @Column(name = "created_user", unique = true, nullable = false)
     public String getCreatedUser() {
         return createdUser;
     }
@@ -108,7 +108,7 @@ public class ProductEntity {
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
     }
-
+    @Column(name = "created_time", unique = true, nullable = false)
     public String getCreatedTime() {
         return createdTime;
     }
@@ -116,7 +116,7 @@ public class ProductEntity {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
-
+    @Column(name = "modified_user", unique = true, nullable = false)
     public String getModifiedUser() {
         return modifiedUser;
     }
@@ -124,7 +124,7 @@ public class ProductEntity {
     public void setModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
     }
-
+    @Column(name = "modified_time", unique = true, nullable = false)
     public String getModifiedTime() {
         return modifiedTime;
     }

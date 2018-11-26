@@ -12,6 +12,6 @@ public interface SysAdminAccountService   {
     void delete(SysAdminAccountEntity sysAdminAccountEntity);
     SysAdminAccountEntity findById(Integer id);
     List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
-    SysAdminAccountEntity verifyAdmin(SysAdminAccountEntity sysAdminAccountEntity);
+    SysAdminAccountEntity verifyAdmin(String account,String  password);
 
 }

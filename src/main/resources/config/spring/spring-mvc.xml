@@ -53,11 +53,4 @@
     <!--<property name="maxUploadSize" value="-1"/> &lt;!&ndash; 最大文件大小，-1为无限止(-1) &ndash;&gt;-->
     <!--</bean>-->
 
-    <!-- 静态资源(js/*)的访问 -->
-    <mvc:resources mapping="/js/**" location="/statics/js/*"/>
-    <mvc:resources mapping="/css/**" location="/statics/css/"/>
-    <mvc:resources mapping="/images/**" location="/statics/images/"/>
-    <mvc:interceptors>
-        <bean class="com.hwkp.interceptor.SessionInterceptor"></bean>
-    </mvc:interceptors>
 </beans>

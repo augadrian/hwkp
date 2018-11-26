@@ -6,9 +6,7 @@ import com.hwkp.entity.SysAdminAccountEntity;
 import com.hwkp.service.SysAdminAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -27,9 +25,9 @@ public class AysAdminAccountController {
 
   @ResponseBody
   @RequestMapping(value="/verifySysAdminAccount", method = RequestMethod.POST)
-  public  String login(String stringObj) throws  IOException{
-   SysAdminAccountEntity sysAdminAccountEntity=mapToJson.readValue(stringObj,SysAdminAccountEntity.class);
-   SysAdminAccountEntity sysAdminAccountEntity1=sysAdminAccountService.verifyAdmin(sysAdminAccountEntity);
+  public  String login( @RequestBody SysAdminAccountEntity sysAdminAccountEntity) throws  IOException{
+
+   SysAdminAccountEntity sysAdminAccountEntity1=sysAdminAccountService.verifyAdmin(sysAdminAccountEntity.getAccount(),sysAdminAccountEntity.getPassword());
      if(sysAdminAccountEntity1!=null){
        jsonResult.setData(sysAdminAccountEntity1);
        jsonResult.setMessage("success");

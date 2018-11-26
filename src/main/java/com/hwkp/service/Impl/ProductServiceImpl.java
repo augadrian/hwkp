@@ -41,7 +41,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public List<ProductEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
-        return null;
+    public List<ProductEntity> findAll(Integer pageNo, Integer pageSize) {
+        return productDao.findAll(pageNo,pageSize);
     }
 }

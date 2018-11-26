@@ -13,5 +13,5 @@ public interface SysAdminAccountDao  extends BaseDao<SysAdminAccountEntity> {
 
     SysAdminAccountEntity findById(Integer id);
     List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
-    SysAdminAccountEntity verifyAdmin(SysAdminAccountEntity sysAdminAccountEntity);
+    SysAdminAccountEntity verifyAdmin(String account,String  password);
 }
