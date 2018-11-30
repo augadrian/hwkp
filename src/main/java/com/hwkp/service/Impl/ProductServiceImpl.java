@@ -36,8 +36,8 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductEntity findById(Integer id) {
-        return productDao.findById(id);
+    public ProductEntity findByProductId(String  productId) {
+        return productDao.findByProductId(productId);
     }
 
     @Override

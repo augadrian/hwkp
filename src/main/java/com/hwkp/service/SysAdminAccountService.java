@@ -10,8 +10,9 @@ public interface SysAdminAccountService   {
     void save(SysAdminAccountEntity sysAdminAccountEntity);
     SysAdminAccountEntity update(SysAdminAccountEntity sysAdminAccountEntity);
     void delete(SysAdminAccountEntity sysAdminAccountEntity);
-    SysAdminAccountEntity findById(Integer id);
-    List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
+    SysAdminAccountEntity findByUserId(String userId);
+    SysAdminAccountEntity findByno(Integer no);
+    List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize);
     SysAdminAccountEntity verifyAdmin(String account,String  password);
 
 }

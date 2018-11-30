@@ -36,12 +36,23 @@ public class OrderServiceImpl implements OrderService  {
     }
 
     @Override
+    public OrderEntity findByOrderId(String orderId) {
+        return orderDao.findByOrderId(orderId);
+    }
+
+    @Override
     public OrderEntity findById(Integer id) {
         return orderDao.findById(id);
     }
 
     @Override
-    public List<OrderEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
-        return null;
+    public List<OrderEntity> findAll(Integer pageNo, Integer pageSize) {
+        return orderDao.findAll(pageNo,pageSize);
+    }
+
+    @Override
+    public OrderEntity editExpress(String orderId,String expressNum) {
+
+        return orderDao.editExpress(orderId,expressNum);
     }
 }

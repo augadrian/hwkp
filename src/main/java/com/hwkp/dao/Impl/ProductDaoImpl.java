@@ -3,6 +3,7 @@ package com.hwkp.dao.Impl;
 import com.hwkp.dao.ProductDao;
 import com.hwkp.entity.ProductEntity;
 import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -21,9 +22,9 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
 
     @Override
     public ProductEntity update(ProductEntity productEntity) {
-        StringBuffer hq=new StringBuffer("update ProductEntity b set no = no" );
+        StringBuffer hq=new StringBuffer("update ProductEntity b set " );
         if(productEntity.getProductId()!=null){
-            hq.append(",b.productId= '"+productEntity.getProductId() + "'");
+            hq.append("b.productId= '"+productEntity.getProductId() + "'");
         } if(productEntity.getCover()!=null){
             hq.append(",b.cover= '"+productEntity.getCover() + "'");
         } if(productEntity.getProName()!=null){
@@ -31,6 +32,8 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
         } if(productEntity.getProAbstract()!=null){
             hq.append(",b.proAbstract= '"+productEntity.getProAbstract() + "'");
         } if(productEntity.getProIntroduction()!=null){
+
+
             hq.append(",b.proIntroduction= '"+productEntity.getProIntroduction() + "'");
         } if(productEntity.getProOriginalPrice()!=null){
             hq.append(",b.proOriginalPrice= '"+productEntity.getProOriginalPrice() + "'");
@@ -58,8 +61,16 @@ public class ProductDaoImpl  extends BaseDaoImpl<ProductEntity> implements Produ
     }
 
     @Override
-    public ProductEntity findById(Integer id) {
-        return (ProductEntity) super.findById(ProductEntity.class,id);
+    public ProductEntity findByProductId(String  productId) {
+        Criteria criteria=this.sessionFactory.getCurrentSession().createCriteria(ProductEntity.class);
+        criteria.add(Restrictions.eq("productId",productId));
+        return criteria!=null?(ProductEntity) criteria.list().get(0):null;
+
+    }
+
+    @Override
+    public ProductEntity findById(Integer no) {
+        return (ProductEntity)super.findById(ProductEntity.class,no);
     }
 
     @Override

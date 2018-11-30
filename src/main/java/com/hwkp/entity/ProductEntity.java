@@ -1,6 +1,7 @@
 package com.hwkp.entity;
 
 
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 @Entity
@@ -21,7 +22,7 @@ public class ProductEntity {
     private String modifiedTime;//
 
     @Id
-    @Column(name = "no", unique = true, nullable = false)
+    @Column(name = "no", nullable = false)
     @GeneratedValue(strategy = GenerationType.AUTO)
     public Integer getNo() {
         return no;
@@ -32,7 +33,7 @@ public class ProductEntity {
     }
 
 
-    @Column(name = "product_id", unique = true, nullable = false)
+    @Column(name = "product_id")
     public String getProductId() {
         return productId;
     }
@@ -40,7 +41,7 @@ public class ProductEntity {
     public void setProductId(String productId) {
         this.productId = productId;
     }
-    @Column(name = "cover", unique = true, nullable = false)
+    @Column(name = "cover")
     public String getCover() {
         return cover;
     }
@@ -49,7 +50,7 @@ public class ProductEntity {
         this.cover = cover;
     }
 
-    @Column(name = "pro_name", unique = true, nullable = false)
+    @Column(name = "pro_name")
     public String getProName() {
         return proName;
     }
@@ -58,7 +59,7 @@ public class ProductEntity {
         this.proName = proName;
     }
 
-    @Column(name = "pro_abstract", unique = true, nullable = false)
+    @Column(name = "pro_abstract", unique = true)
     public String getProAbstract() {
         return proAbstract;
     }
@@ -67,7 +68,7 @@ public class ProductEntity {
         this.proAbstract = proAbstract;
     }
 
-    @Column(name = "pro_introduction", unique = true, nullable = false)
+   @Column(name="pro_introduction")
     public String getProIntroduction() {
         return proIntroduction;
     }
@@ -76,7 +77,7 @@ public class ProductEntity {
         this.proIntroduction = proIntroduction;
     }
 
-    @Column(name = "pro_original_price", unique = true, nullable = false)
+    @Column(name = "pro_original_price", unique = true)
     public BigDecimal getProOriginalPrice() {
         return proOriginalPrice;
     }
@@ -84,7 +85,7 @@ public class ProductEntity {
     public void setProOriginalPrice(BigDecimal proOriginalPrice) {
         this.proOriginalPrice = proOriginalPrice;
     }
-    @Column(name = "express_fee", unique = true, nullable = false)
+    @Column(name = "express_fee", unique = true)
     public BigDecimal getExpressFee() {
         return expressFee;
     }
@@ -92,7 +93,7 @@ public class ProductEntity {
     public void setExpressFee(BigDecimal expressFee) {
         this.expressFee = expressFee;
     }
-    @Column(name = "is_active", unique = true, nullable = false)
+    @Column(name = "is_active", unique = true)
     public Integer getIsActive() {
         return isActive;
     }
@@ -100,7 +101,7 @@ public class ProductEntity {
     public void setIsActive(Integer isActive) {
         this.isActive = isActive;
     }
-    @Column(name = "created_user", unique = true, nullable = false)
+    @Column(name = "created_user", unique = true)
     public String getCreatedUser() {
         return createdUser;
     }
@@ -108,7 +109,7 @@ public class ProductEntity {
     public void setCreatedUser(String createdUser) {
         this.createdUser = createdUser;
     }
-    @Column(name = "created_time", unique = true, nullable = false)
+    @Column(name = "created_time", unique = true)
     public String getCreatedTime() {
         return createdTime;
     }
@@ -116,7 +117,7 @@ public class ProductEntity {
     public void setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
     }
-    @Column(name = "modified_user", unique = true, nullable = false)
+    @Column(name = "modified_user", unique = true)
     public String getModifiedUser() {
         return modifiedUser;
     }
@@ -124,7 +125,7 @@ public class ProductEntity {
     public void setModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
     }
-    @Column(name = "modified_time", unique = true, nullable = false)
+    @Column(name = "modified_time", unique = true)
     public String getModifiedTime() {
         return modifiedTime;
     }

@@ -33,8 +33,10 @@
         <property name="automaticTestTable"><value>conn_test</value></property>
         <property name="checkoutTimeout"><value>300</value></property>
         <property name="acquireRetryDelay">
+
             <value>100</value>
         </property>
+
     </bean>
 
     <!-- session工厂 -->

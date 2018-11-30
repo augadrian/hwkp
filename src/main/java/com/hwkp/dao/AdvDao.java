@@ -13,6 +13,7 @@ public interface AdvDao extends BaseDao<AdvEntity>{
 
     AdvEntity findById(Integer id);
 
-    List<AdvEntity> findAll(Integer pageNo,Integer pageSize,Map<String,Object> params);
+    List<AdvEntity> findAll(Integer pageNo,Integer pageSize);
+
 
 }

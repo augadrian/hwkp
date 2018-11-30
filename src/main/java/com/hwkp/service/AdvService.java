@@ -11,5 +11,5 @@ public interface AdvService    {
     AdvEntity update(AdvEntity advEntity);
     void delete(AdvEntity advEntity);
     AdvEntity findById(Integer id);
-    List<AdvEntity> findAll(Integer pageNo, Integer pageSize, Map<String,Object> params);
+    List<AdvEntity> findAll(Integer pageNo, Integer pageSize);
 }

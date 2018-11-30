@@ -36,13 +36,18 @@ public class SysAdminAccountServiceImpl implements SysAdminAccountService {
     }
 
     @Override
-    public SysAdminAccountEntity findById(Integer no) {
-        return sysAdminAccountDao.findById(no);
+    public SysAdminAccountEntity findByUserId(String userId) {
+        return sysAdminAccountDao.findByUserId(userId);
     }
 
     @Override
-    public List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
-        return null;
+    public SysAdminAccountEntity findByno(Integer no) {
+        return sysAdminAccountDao.findByno(no);
+    }
+
+    @Override
+    public List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize) {
+        return sysAdminAccountDao.findAll(pageNo,pageSize);
     }
 
     @Override

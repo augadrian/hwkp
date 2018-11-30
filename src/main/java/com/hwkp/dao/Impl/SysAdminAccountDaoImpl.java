@@ -2,8 +2,11 @@ package com.hwkp.dao.Impl;
 
 import com.hwkp.dao.SysAdminAccountDao;
 import com.hwkp.entity.SysAdminAccountEntity;
+import org.hibernate.Criteria;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -50,7 +53,7 @@ public class SysAdminAccountDaoImpl  extends BaseDaoImpl<SysAdminAccountEntity> 
             hq.append(",s.modifiedTime= '"+sysAdminAccountEntity.getModifiedTime()+ "'");
         }
      String  hql=hq + " where s.no =" + sysAdminAccountEntity.getNo() + "";
-        return  this.sessionFactory.getCurrentSession().createQuery(hql).executeUpdate()> 0?this.findById(sysAdminAccountEntity.getNo()):null;
+        return  this.sessionFactory.getCurrentSession().createQuery(hql).executeUpdate()> 0?this.findByno(sysAdminAccountEntity.getNo()):null;
     }
 
     @Override
@@ -59,13 +62,32 @@ public class SysAdminAccountDaoImpl  extends BaseDaoImpl<SysAdminAccountEntity> 
     }
 
     @Override
-    public SysAdminAccountEntity findById(Integer id) {
-        return null;
+    public SysAdminAccountEntity findByUserId(String userId) {
+        Criteria criteria=this.sessionFactory.getCurrentSession().createCriteria(SysAdminAccountEntity.class);
+        criteria.add(Restrictions.eq("userId",userId));
+        return criteria!=null?(SysAdminAccountEntity) criteria.list().get(0):null;
     }
 
     @Override
-    public List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
-        return null;
+    public SysAdminAccountEntity findByno(Integer no) {
+        Criteria criteria=this.sessionFactory.getCurrentSession().createCriteria(SysAdminAccountEntity.class);
+        criteria.add(Restrictions.eq("no",no));
+        return criteria!=null?(SysAdminAccountEntity) criteria.list().get(0):null;
+
+    }
+
+    @Override
+    public List<SysAdminAccountEntity> findAll(Integer pageNo, Integer pageSize) {
+        String sql=new String("select p from SysAdminAccountEntity p where 1=1");
+        List<SysAdminAccountEntity> sysAdminAccountEntities=new ArrayList<SysAdminAccountEntity>();
+        if(pageNo!=null) {
+            sysAdminAccountEntities =this.sessionFactory.getCurrentSession().createQuery(sql).setFirstResult((pageNo - 1) * pageSize)
+                    .setMaxResults(pageSize).list();
+
+        }else {
+            sysAdminAccountEntities = this.sessionFactory.getCurrentSession().createQuery(sql).list();
+        }
+        return sysAdminAccountEntities!=null&&sysAdminAccountEntities.size()>0?sysAdminAccountEntities:null;
     }
 
     @Override

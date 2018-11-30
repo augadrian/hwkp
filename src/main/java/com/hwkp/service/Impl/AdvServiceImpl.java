@@ -41,7 +41,7 @@ public class AdvServiceImpl implements AdvService {
     }
 
     @Override
-    public List<AdvEntity> findAll(Integer pageNo, Integer pageSize, Map<String, Object> params) {
-        return null;
+    public List<AdvEntity> findAll(Integer pageNo, Integer pageSize) {
+        return advDao.findAll(pageNo,pageSize);
     }
 }
